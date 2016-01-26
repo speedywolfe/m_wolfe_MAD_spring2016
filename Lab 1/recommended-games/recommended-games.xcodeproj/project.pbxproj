@@ -15,6 +15,8 @@
 		AF84A1AB1C57370700650D95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF84A1A91C57370700650D95 /* LaunchScreen.storyboard */; };
 		AF84A1B61C57370700650D95 /* recommended_gamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A1B51C57370700650D95 /* recommended_gamesTests.swift */; };
 		AF84A1C11C57370700650D95 /* recommended_gamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A1C01C57370700650D95 /* recommended_gamesUITests.swift */; };
+		AF84A1CF1C5738EE00650D95 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A1CE1C5738EE00650D95 /* ThirdViewController.swift */; };
+		AF84A1D11C57390500650D95 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF84A1D01C57390500650D95 /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AF84A1BC1C57370700650D95 /* recommended-gamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "recommended-gamesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF84A1C01C57370700650D95 /* recommended_gamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recommended_gamesUITests.swift; sourceTree = "<group>"; };
 		AF84A1C21C57370700650D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF84A1CE1C5738EE00650D95 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		AF84A1D01C57390500650D95 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				AF84A19E1C57370700650D95 /* AppDelegate.swift */,
 				AF84A1A01C57370700650D95 /* FirstViewController.swift */,
 				AF84A1A21C57370700650D95 /* SecondViewController.swift */,
+				AF84A1CE1C5738EE00650D95 /* ThirdViewController.swift */,
+				AF84A1D01C57390500650D95 /* FourthViewController.swift */,
 				AF84A1A41C57370700650D95 /* Main.storyboard */,
 				AF84A1A71C57370700650D95 /* Assets.xcassets */,
 				AF84A1A91C57370700650D95 /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 			files = (
 				AF84A1A31C57370700650D95 /* SecondViewController.swift in Sources */,
 				AF84A19F1C57370700650D95 /* AppDelegate.swift in Sources */,
+				AF84A1CF1C5738EE00650D95 /* ThirdViewController.swift in Sources */,
 				AF84A1A11C57370700650D95 /* FirstViewController.swift in Sources */,
+				AF84A1D11C57390500650D95 /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
