@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RPG</key>
+	<array>
+		<string>Chrono Trigger</string>
+		<string>Dark Souls</string>
+		<string>Final Fantasy</string>
+		<string>Xenoblade Chronicles</string>
+		<string>Dragon Age</string>
+	</array>
+	<key>Action/Adventure</key>
+	<array>
+		<string>The Legend of Zelda</string>
+		<string>Tomb Raider</string>
+		<string>Bloodborne</string>
+		<string>Shadow of the Colossus</string>
+		<string>Assassin&apos;s Creed</string>
+	</array>
+	<key>Shooter</key>
+	<array>
+		<string>Uncharted</string>
+		<string>Bioshock</string>
+		<string>Borderlands</string>
+		<string>Far Cry</string>
+		<string>Sin and Punishment</string>
+	</array>
+	<key>Platformer</key>
+	<array>
+		<string>Super Mario Galaxy</string>
+		<string>Rayman Origins</string>
+		<string>Limbo</string>
+		<string>Super Meat Boy</string>
+		<string>Crash Bandicoot</string>
+	</array>
+	<key>Simulation</key>
+	<array>
+		<string>Sim City</string>
+		<string>Age of Empires</string>
+		<string>Roller Coaster Tycoon</string>
+		<string>FTL</string>
+		<string>Spore</string>
+	</array>
+	<key>Strategy</key>
+	<array>
+		<string>Fire Emblem</string>
+		<string>Pikmin</string>
+		<string>Plants vs. Zombies</string>
+		<string>Advance Wars</string>
+		<string>Plague Inc.</string>
+	</array>
+</dict>
+</plist>

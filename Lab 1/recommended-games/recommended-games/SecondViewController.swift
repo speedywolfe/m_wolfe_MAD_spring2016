@@ -8,16 +8,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class SecondViewController: UIViewController {
     
     
     @IBOutlet weak var choiceLabel: UILabel!
     @IBOutlet weak var gamePicker: UIPickerView!
     
-    let charactersOne = ["Mario", "Link", "Donkey Kong", "Samus"]
-    let charactersTwo = 
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
