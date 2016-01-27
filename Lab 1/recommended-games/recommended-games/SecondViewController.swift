@@ -10,10 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    
-    @IBOutlet weak var choiceLabel: UILabel!
-    @IBOutlet weak var gamePicker: UIPickerView!
-    
+    @IBAction func gameButton(sender: UIButton) {
+        if(UIApplication.sharedApplication().canOpenURL(NSURL(string: "music://")!)) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "music")!)
+        }
+        else {
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://www.ign.com/games/reviews")!)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
