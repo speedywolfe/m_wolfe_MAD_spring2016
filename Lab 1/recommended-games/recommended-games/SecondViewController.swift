@@ -11,8 +11,8 @@ import UIKit
 class SecondViewController: UIViewController {
     
     @IBAction func gameButton(sender: UIButton) {
-        if(UIApplication.sharedApplication().canOpenURL(NSURL(string: "music://")!)) {
-            UIApplication.sharedApplication().openURL(NSURL(string: "music")!)
+        if(UIApplication.sharedApplication().canOpenURL(NSURL(string: "https://geo.itunes.apple.com/us/app/plants-vs.-zombies/id350642635?mt=8")!)) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://geo.itunes.apple.com/us/app/plants-vs.-zombies/id350642635?mt=8")!)
         }
         else {
             UIApplication.sharedApplication().openURL(NSURL(string: "http://www.ign.com/games/reviews")!)
