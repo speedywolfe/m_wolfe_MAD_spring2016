@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Picker-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="recommended_games" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="56" id="qSI-n3-Pq0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Picker" image="sample-886-ice-cream-cone" selectedImage="sample-886-ice-cream-cone" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="choiceLabel" destination="A5M-7J-77L" id="Kpf-xd-G2e"/>
                         <outlet property="gamePicker" destination="gWd-H5-wId" id="7Nm-tm-38A"/>
@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Link-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="recommended_games" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                             <constraint firstItem="FIc-KN-t78" firstAttribute="centerX" secondItem="TSn-gw-5Sn" secondAttribute="centerX" id="qnJ-Vh-eba"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Link" image="sample-881-globe" selectedImage="sample-881-globe" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="sample-881-globe" width="28" height="28"/>
+        <image name="sample-886-ice-cream-cone" width="20" height="28"/>
     </resources>
 </document>
