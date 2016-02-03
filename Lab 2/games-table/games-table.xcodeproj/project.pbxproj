@@ -12,6 +12,8 @@
 		AF89E3BE1C619A6100BD3AD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3BC1C619A6100BD3AD1 /* Main.storyboard */; };
 		AF89E3C01C619A6100BD3AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3BF1C619A6100BD3AD1 /* Assets.xcassets */; };
 		AF89E3C31C619A6100BD3AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3C11C619A6100BD3AD1 /* LaunchScreen.storyboard */; };
+		AF89E3CD1C619EC100BD3AD1 /* games.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3CC1C619EC100BD3AD1 /* games.plist */; };
+		AF89E3CF1C61BCD700BD3AD1 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89E3CE1C61BCD700BD3AD1 /* SearchResultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AF89E3BF1C619A6100BD3AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF89E3C21C619A6100BD3AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF89E3C41C619A6100BD3AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF89E3CC1C619EC100BD3AD1 /* games.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = games.plist; sourceTree = "<group>"; };
+		AF89E3CE1C61BCD700BD3AD1 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 			children = (
 				AF89E3B81C619A6100BD3AD1 /* AppDelegate.swift */,
 				AF89E3BA1C619A6100BD3AD1 /* ViewController.swift */,
+				AF89E3CE1C61BCD700BD3AD1 /* SearchResultsController.swift */,
 				AF89E3BC1C619A6100BD3AD1 /* Main.storyboard */,
 				AF89E3BF1C619A6100BD3AD1 /* Assets.xcassets */,
 				AF89E3C11C619A6100BD3AD1 /* LaunchScreen.storyboard */,
+				AF89E3CC1C619EC100BD3AD1 /* games.plist */,
 				AF89E3C41C619A6100BD3AD1 /* Info.plist */,
 			);
 			path = "games-table";
@@ -125,6 +131,7 @@
 			files = (
 				AF89E3C31C619A6100BD3AD1 /* LaunchScreen.storyboard in Resources */,
 				AF89E3C01C619A6100BD3AD1 /* Assets.xcassets in Resources */,
+				AF89E3CD1C619EC100BD3AD1 /* games.plist in Resources */,
 				AF89E3BE1C619A6100BD3AD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF89E3BB1C619A6100BD3AD1 /* ViewController.swift in Sources */,
+				AF89E3CF1C61BCD700BD3AD1 /* SearchResultsController.swift in Sources */,
 				AF89E3B91C619A6100BD3AD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
