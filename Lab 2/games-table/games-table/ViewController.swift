@@ -20,6 +20,16 @@ class ViewController: UITableViewController {
         let path = NSBundle.mainBundle().pathForResource("games", ofType: "plist")
         games = NSDictionary(contentsOfFile: path!) as! [String : [String]]
         headers = Array(games.keys)
+        
+        let resultsController = SearchResultsController()
+        resultsController.games = games
+        resultsController.headers = headers
+        searchController = UISearchController(searchResultsController: resultsController)
+        
+        searchController.searchBar.placeholder = "Enter Search"
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = resultsController
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
