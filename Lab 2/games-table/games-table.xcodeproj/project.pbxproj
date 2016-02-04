@@ -12,8 +12,8 @@
 		AF89E3BE1C619A6100BD3AD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3BC1C619A6100BD3AD1 /* Main.storyboard */; };
 		AF89E3C01C619A6100BD3AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3BF1C619A6100BD3AD1 /* Assets.xcassets */; };
 		AF89E3C31C619A6100BD3AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3C11C619A6100BD3AD1 /* LaunchScreen.storyboard */; };
-		AF89E3CD1C619EC100BD3AD1 /* games.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF89E3CC1C619EC100BD3AD1 /* games.plist */; };
 		AF89E3D11C61BDE000BD3AD1 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89E3D01C61BDE000BD3AD1 /* SearchResultsController.swift */; };
+		AFA8AB7A1C62D640003585B9 /* games.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFA8AB791C62D640003585B9 /* games.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		AF89E3BF1C619A6100BD3AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF89E3C21C619A6100BD3AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF89E3C41C619A6100BD3AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF89E3CC1C619EC100BD3AD1 /* games.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = games.plist; sourceTree = "<group>"; };
 		AF89E3D01C61BDE000BD3AD1 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsController.swift; path = ../SearchResultsController.swift; sourceTree = "<group>"; };
+		AFA8AB791C62D640003585B9 /* games.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = games.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 				AF89E3BC1C619A6100BD3AD1 /* Main.storyboard */,
 				AF89E3BF1C619A6100BD3AD1 /* Assets.xcassets */,
 				AF89E3C11C619A6100BD3AD1 /* LaunchScreen.storyboard */,
-				AF89E3CC1C619EC100BD3AD1 /* games.plist */,
+				AFA8AB791C62D640003585B9 /* games.plist */,
 				AF89E3C41C619A6100BD3AD1 /* Info.plist */,
 			);
 			path = "games-table";
@@ -131,7 +131,7 @@
 			files = (
 				AF89E3C31C619A6100BD3AD1 /* LaunchScreen.storyboard in Resources */,
 				AF89E3C01C619A6100BD3AD1 /* Assets.xcassets in Resources */,
-				AF89E3CD1C619EC100BD3AD1 /* games.plist in Resources */,
+				AFA8AB7A1C62D640003585B9 /* games.plist in Resources */,
 				AF89E3BE1C619A6100BD3AD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +293,7 @@
 				AF89E3C91C619A6100BD3AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

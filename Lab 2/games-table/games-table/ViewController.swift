@@ -20,6 +20,7 @@ class ViewController: UITableViewController {
         let path = NSBundle.mainBundle().pathForResource("games", ofType: "plist")
         games = NSDictionary(contentsOfFile: path!) as! [String : [String]]
         headers = Array(games.keys)
+        headers.sortInPlace({$0 < $1}) //Wasn't going to sort, but it looked weird otherwise
         
         let resultsController = SearchResultsController()
         resultsController.games = games
@@ -60,9 +61,10 @@ class ViewController: UITableViewController {
         return headers[section]
     }
     
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return headers
-    }
+    //Header names are too long so it looks dumb, plus you don't really need it with such a small amount of data
+//    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+//        return headers
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
