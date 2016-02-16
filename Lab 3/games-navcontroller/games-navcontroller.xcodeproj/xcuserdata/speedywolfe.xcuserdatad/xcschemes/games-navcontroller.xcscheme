@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFF92A3B1C72CB940015B2F0"
+               BlueprintIdentifier = "AFF92A651C72D9390015B2F0"
                BuildableName = "games-navcontroller.app"
                BlueprintName = "games-navcontroller"
                ReferencedContainer = "container:games-navcontroller.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AFF92A3B1C72CB940015B2F0"
+            BlueprintIdentifier = "AFF92A651C72D9390015B2F0"
             BuildableName = "games-navcontroller.app"
             BlueprintName = "games-navcontroller"
             ReferencedContainer = "container:games-navcontroller.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AFF92A3B1C72CB940015B2F0"
+            BlueprintIdentifier = "AFF92A651C72D9390015B2F0"
             BuildableName = "games-navcontroller.app"
             BlueprintName = "games-navcontroller"
             ReferencedContainer = "container:games-navcontroller.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AFF92A3B1C72CB940015B2F0"
+            BlueprintIdentifier = "AFF92A651C72D9390015B2F0"
             BuildableName = "games-navcontroller.app"
             BlueprintName = "games-navcontroller"
             ReferencedContainer = "container:games-navcontroller.xcodeproj">

@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AFF92A401C72CB940015B2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92A3F1C72CB940015B2F0 /* AppDelegate.swift */; };
-		AFF92A421C72CB940015B2F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92A411C72CB940015B2F0 /* ViewController.swift */; };
-		AFF92A451C72CB940015B2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A431C72CB940015B2F0 /* Main.storyboard */; };
-		AFF92A471C72CB940015B2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A461C72CB940015B2F0 /* Assets.xcassets */; };
-		AFF92A4A1C72CB940015B2F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A481C72CB940015B2F0 /* LaunchScreen.storyboard */; };
+		AFF92A6A1C72D9390015B2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92A691C72D9390015B2F0 /* AppDelegate.swift */; };
+		AFF92A6C1C72D9390015B2F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92A6B1C72D9390015B2F0 /* ViewController.swift */; };
+		AFF92A6F1C72D9390015B2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A6D1C72D9390015B2F0 /* Main.storyboard */; };
+		AFF92A711C72D9390015B2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A701C72D9390015B2F0 /* Assets.xcassets */; };
+		AFF92A741C72D9390015B2F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A721C72D9390015B2F0 /* LaunchScreen.storyboard */; };
+		AFF92A7C1C72DA7C0015B2F0 /* games.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFF92A7B1C72DA7C0015B2F0 /* games.plist */; };
+		AFF92A7E1C72DA950015B2F0 /* GamesClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92A7D1C72DA950015B2F0 /* GamesClass.swift */; };
+		AFF92A821C72DD4C0015B2F0 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92A811C72DD4C0015B2F0 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AFF92A3C1C72CB940015B2F0 /* games-navcontroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "games-navcontroller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFF92A3F1C72CB940015B2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFF92A411C72CB940015B2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFF92A441C72CB940015B2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFF92A461C72CB940015B2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AFF92A491C72CB940015B2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AFF92A4B1C72CB940015B2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF92A661C72D9390015B2F0 /* games-navcontroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "games-navcontroller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF92A691C72D9390015B2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFF92A6B1C72D9390015B2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFF92A6E1C72D9390015B2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFF92A701C72D9390015B2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFF92A731C72D9390015B2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFF92A751C72D9390015B2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF92A7B1C72DA7C0015B2F0 /* games.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = games.plist; sourceTree = "<group>"; };
+		AFF92A7D1C72DA950015B2F0 /* GamesClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesClass.swift; sourceTree = "<group>"; };
+		AFF92A811C72DD4C0015B2F0 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AFF92A391C72CB940015B2F0 /* Frameworks */ = {
+		AFF92A631C72D9390015B2F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,31 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AFF92A331C72CB940015B2F0 = {
+		AFF92A5D1C72D9390015B2F0 = {
 			isa = PBXGroup;
 			children = (
-				AFF92A3E1C72CB940015B2F0 /* games-navcontroller */,
-				AFF92A3D1C72CB940015B2F0 /* Products */,
+				AFF92A681C72D9390015B2F0 /* games-navcontroller */,
+				AFF92A671C72D9390015B2F0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AFF92A3D1C72CB940015B2F0 /* Products */ = {
+		AFF92A671C72D9390015B2F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFF92A3C1C72CB940015B2F0 /* games-navcontroller.app */,
+				AFF92A661C72D9390015B2F0 /* games-navcontroller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFF92A3E1C72CB940015B2F0 /* games-navcontroller */ = {
+		AFF92A681C72D9390015B2F0 /* games-navcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				AFF92A3F1C72CB940015B2F0 /* AppDelegate.swift */,
-				AFF92A411C72CB940015B2F0 /* ViewController.swift */,
-				AFF92A431C72CB940015B2F0 /* Main.storyboard */,
-				AFF92A461C72CB940015B2F0 /* Assets.xcassets */,
-				AFF92A481C72CB940015B2F0 /* LaunchScreen.storyboard */,
-				AFF92A4B1C72CB940015B2F0 /* Info.plist */,
+				AFF92A691C72D9390015B2F0 /* AppDelegate.swift */,
+				AFF92A6B1C72D9390015B2F0 /* ViewController.swift */,
+				AFF92A811C72DD4C0015B2F0 /* DetailTableViewController.swift */,
+				AFF92A6D1C72D9390015B2F0 /* Main.storyboard */,
+				AFF92A7D1C72DA950015B2F0 /* GamesClass.swift */,
+				AFF92A701C72D9390015B2F0 /* Assets.xcassets */,
+				AFF92A721C72D9390015B2F0 /* LaunchScreen.storyboard */,
+				AFF92A7B1C72DA7C0015B2F0 /* games.plist */,
+				AFF92A751C72D9390015B2F0 /* Info.plist */,
 			);
 			path = "games-navcontroller";
 			sourceTree = "<group>";
@@ -67,13 +76,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFF92A3B1C72CB940015B2F0 /* games-navcontroller */ = {
+		AFF92A651C72D9390015B2F0 /* games-navcontroller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFF92A4E1C72CB940015B2F0 /* Build configuration list for PBXNativeTarget "games-navcontroller" */;
+			buildConfigurationList = AFF92A781C72D9390015B2F0 /* Build configuration list for PBXNativeTarget "games-navcontroller" */;
 			buildPhases = (
-				AFF92A381C72CB940015B2F0 /* Sources */,
-				AFF92A391C72CB940015B2F0 /* Frameworks */,
-				AFF92A3A1C72CB940015B2F0 /* Resources */,
+				AFF92A621C72D9390015B2F0 /* Sources */,
+				AFF92A631C72D9390015B2F0 /* Frameworks */,
+				AFF92A641C72D9390015B2F0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,26 +90,26 @@
 			);
 			name = "games-navcontroller";
 			productName = "games-navcontroller";
-			productReference = AFF92A3C1C72CB940015B2F0 /* games-navcontroller.app */;
+			productReference = AFF92A661C72D9390015B2F0 /* games-navcontroller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AFF92A341C72CB940015B2F0 /* Project object */ = {
+		AFF92A5E1C72D9390015B2F0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mitchell Wolfe";
 				TargetAttributes = {
-					AFF92A3B1C72CB940015B2F0 = {
+					AFF92A651C72D9390015B2F0 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 22RA866XNK;
 					};
 				};
 			};
-			buildConfigurationList = AFF92A371C72CB940015B2F0 /* Build configuration list for PBXProject "games-navcontroller" */;
+			buildConfigurationList = AFF92A611C72D9390015B2F0 /* Build configuration list for PBXProject "games-navcontroller" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,54 +117,57 @@
 				en,
 				Base,
 			);
-			mainGroup = AFF92A331C72CB940015B2F0;
-			productRefGroup = AFF92A3D1C72CB940015B2F0 /* Products */;
+			mainGroup = AFF92A5D1C72D9390015B2F0;
+			productRefGroup = AFF92A671C72D9390015B2F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFF92A3B1C72CB940015B2F0 /* games-navcontroller */,
+				AFF92A651C72D9390015B2F0 /* games-navcontroller */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AFF92A3A1C72CB940015B2F0 /* Resources */ = {
+		AFF92A641C72D9390015B2F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF92A4A1C72CB940015B2F0 /* LaunchScreen.storyboard in Resources */,
-				AFF92A471C72CB940015B2F0 /* Assets.xcassets in Resources */,
-				AFF92A451C72CB940015B2F0 /* Main.storyboard in Resources */,
+				AFF92A741C72D9390015B2F0 /* LaunchScreen.storyboard in Resources */,
+				AFF92A711C72D9390015B2F0 /* Assets.xcassets in Resources */,
+				AFF92A7C1C72DA7C0015B2F0 /* games.plist in Resources */,
+				AFF92A6F1C72D9390015B2F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AFF92A381C72CB940015B2F0 /* Sources */ = {
+		AFF92A621C72D9390015B2F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF92A421C72CB940015B2F0 /* ViewController.swift in Sources */,
-				AFF92A401C72CB940015B2F0 /* AppDelegate.swift in Sources */,
+				AFF92A821C72DD4C0015B2F0 /* DetailTableViewController.swift in Sources */,
+				AFF92A7E1C72DA950015B2F0 /* GamesClass.swift in Sources */,
+				AFF92A6C1C72D9390015B2F0 /* ViewController.swift in Sources */,
+				AFF92A6A1C72D9390015B2F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AFF92A431C72CB940015B2F0 /* Main.storyboard */ = {
+		AFF92A6D1C72D9390015B2F0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFF92A441C72CB940015B2F0 /* Base */,
+				AFF92A6E1C72D9390015B2F0 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AFF92A481C72CB940015B2F0 /* LaunchScreen.storyboard */ = {
+		AFF92A721C72D9390015B2F0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFF92A491C72CB940015B2F0 /* Base */,
+				AFF92A731C72D9390015B2F0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +175,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AFF92A4C1C72CB940015B2F0 /* Debug */ = {
+		AFF92A761C72D9390015B2F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		AFF92A4D1C72CB940015B2F0 /* Release */ = {
+		AFF92A771C72D9390015B2F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +258,7 @@
 			};
 			name = Release;
 		};
-		AFF92A4F1C72CB940015B2F0 /* Debug */ = {
+		AFF92A791C72D9390015B2F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -257,7 +269,7 @@
 			};
 			name = Debug;
 		};
-		AFF92A501C72CB940015B2F0 /* Release */ = {
+		AFF92A7A1C72D9390015B2F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -271,24 +283,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFF92A371C72CB940015B2F0 /* Build configuration list for PBXProject "games-navcontroller" */ = {
+		AFF92A611C72D9390015B2F0 /* Build configuration list for PBXProject "games-navcontroller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFF92A4C1C72CB940015B2F0 /* Debug */,
-				AFF92A4D1C72CB940015B2F0 /* Release */,
+				AFF92A761C72D9390015B2F0 /* Debug */,
+				AFF92A771C72D9390015B2F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFF92A4E1C72CB940015B2F0 /* Build configuration list for PBXNativeTarget "games-navcontroller" */ = {
+		AFF92A781C72D9390015B2F0 /* Build configuration list for PBXNativeTarget "games-navcontroller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFF92A4F1C72CB940015B2F0 /* Debug */,
-				AFF92A501C72CB940015B2F0 /* Release */,
+				AFF92A791C72D9390015B2F0 /* Debug */,
+				AFF92A7A1C72D9390015B2F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AFF92A341C72CB940015B2F0 /* Project object */;
+	rootObject = AFF92A5E1C72D9390015B2F0 /* Project object */;
 }
