@@ -20,7 +20,7 @@ class DetailTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -86,6 +86,18 @@ class DetailTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        if segue.identifier == "doneSegue" {
+            let source = segue.sourceViewController as! AddGameViewController
+            if ((source.addedGame.isEmpty) == false) {
+                games.append(source.addedGame)
+                tableView.reloadData()
+                let chosenGenre = genreListDetail.genres[selectedGenre]
+                genreListDetail.GameData[chosenGenre]?.append(source.addedGame)
+            }
+        }
     }
 
     /*

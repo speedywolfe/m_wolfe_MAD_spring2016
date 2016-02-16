@@ -60,10 +60,73 @@
                             <outlet property="delegate" destination="4XP-H6-jXy" id="hcs-3W-Ru9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Qfo-Kt-qlo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fPB-RX-7zq">
+                            <connections>
+                                <segue destination="OiH-Vo-jRe" kind="presentation" id="19h-0a-Kvd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYj-Wu-aB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2315" y="626"/>
+        </scene>
+        <!--Add New Country-->
+        <scene sceneID="xVO-EE-JLs">
+            <objects>
+                <viewController id="QBz-X4-s9Q" customClass="AddGameViewController" customModule="games_navcontroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U5x-A0-0gH"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ui-i7-N4L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Lw-UZ-b9M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpV-So-mbQ">
+                                <rect key="frame" x="279" y="71" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXh-H4-LYG">
+                                <rect key="frame" x="168" y="189" width="263" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="263" id="kdd-5m-tTi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vpV-So-mbQ" firstAttribute="top" secondItem="U5x-A0-0gH" secondAttribute="bottom" constant="7" id="0SM-ZZ-Ale"/>
+                            <constraint firstItem="RXh-H4-LYG" firstAttribute="top" secondItem="vpV-So-mbQ" secondAttribute="bottom" constant="97" id="TA6-6R-9Mi"/>
+                            <constraint firstItem="vpV-So-mbQ" firstAttribute="centerX" secondItem="RXh-H4-LYG" secondAttribute="centerX" id="VA0-ix-J0G"/>
+                            <constraint firstItem="RXh-H4-LYG" firstAttribute="centerX" secondItem="5Lw-UZ-b9M" secondAttribute="centerX" id="wfh-d0-sik"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Country" id="kID-DE-5ga">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="eyS-L0-A05">
+                            <connections>
+                                <segue destination="icP-rP-Azy" kind="unwind" identifier="cancelSegue" unwindAction="unwindSegue:" id="Vmw-kb-lqy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="zcJ-Za-fPu">
+                            <connections>
+                                <segue destination="icP-rP-Azy" kind="unwind" identifier="doneSegue" unwindAction="unwindSegue:" id="jwA-Qe-jYS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gameTextField" destination="RXh-H4-LYG" id="zjb-ch-jh8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXW-jH-Gy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="icP-rP-Azy" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3871" y="626"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GgM-T4-9ux">
@@ -82,6 +145,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fg2-Vz-wu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731" y="626"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tPe-vg-zxa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OiH-Vo-jRe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6is-9X-LzU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QBz-X4-s9Q" kind="relationship" relationship="rootViewController" id="7bB-z9-Bfl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXU-TY-1CQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3059" y="626"/>
         </scene>
     </scenes>
 </document>
