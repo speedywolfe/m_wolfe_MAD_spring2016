@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>genres</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>RPG</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Role-playing_video_game</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Action/Adventure</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Action-adventure_game</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Shooter</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Shooter_game</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Platformer</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Platform_game</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Simulation</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Simulation_video_game</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Strategy</string>
+			<key>url</key>
+			<string>https://en.wikipedia.org/wiki/Strategy_video_game</string>
+		</dict>
+	</array>
+</dict>
+</plist>
