@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="2315" y="626"/>
         </scene>
-        <!--Add New Country-->
+        <!--Add New Game-->
         <scene sceneID="xVO-EE-JLs">
             <objects>
                 <viewController id="QBz-X4-s9Q" customClass="AddGameViewController" customModule="games_navcontroller" customModuleProvider="target" sceneMemberID="viewController">
@@ -175,7 +175,7 @@
                             <constraint firstItem="RXh-H4-LYG" firstAttribute="centerX" secondItem="5Lw-UZ-b9M" secondAttribute="centerX" id="wfh-d0-sik"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Country" id="kID-DE-5ga">
+                    <navigationItem key="navigationItem" title="Add New Game" id="kID-DE-5ga">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="eyS-L0-A05">
                             <connections>
                                 <segue destination="icP-rP-Azy" kind="unwind" identifier="cancelSegue" unwindAction="unwindSegue:" id="Vmw-kb-lqy"/>
