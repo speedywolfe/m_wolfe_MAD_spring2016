@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		AF8953671C7D6C3F009B8FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8953661C7D6C3F009B8FD4 /* AppDelegate.swift */; };
-		AF8953691C7D6C3F009B8FD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8953681C7D6C3F009B8FD4 /* ViewController.swift */; };
 		AF89536C1C7D6C3F009B8FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89536A1C7D6C3F009B8FD4 /* Main.storyboard */; };
 		AF89536E1C7D6C3F009B8FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89536D1C7D6C3F009B8FD4 /* Assets.xcassets */; };
 		AF8953711C7D6C3F009B8FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89536F1C7D6C3F009B8FD4 /* LaunchScreen.storyboard */; };
+		AF8953791C7D6CAF009B8FD4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8953781C7D6CAF009B8FD4 /* CollectionViewController.swift */; };
+		AF89537B1C7D6DBC009B8FD4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89537A1C7D6DBC009B8FD4 /* CollectionViewCell.swift */; };
+		AF89537D1C7D7677009B8FD4 /* CollectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89537C1C7D7677009B8FD4 /* CollectionSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF8953631C7D6C3F009B8FD4 /* games-collectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "games-collectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8953661C7D6C3F009B8FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF8953681C7D6C3F009B8FD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF89536B1C7D6C3F009B8FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF89536D1C7D6C3F009B8FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF8953701C7D6C3F009B8FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF8953721C7D6C3F009B8FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8953781C7D6CAF009B8FD4 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		AF89537A1C7D6DBC009B8FD4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AF89537C1C7D7677009B8FD4 /* CollectionSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				AF8953661C7D6C3F009B8FD4 /* AppDelegate.swift */,
-				AF8953681C7D6C3F009B8FD4 /* ViewController.swift */,
 				AF89536A1C7D6C3F009B8FD4 /* Main.storyboard */,
+				AF89537C1C7D7677009B8FD4 /* CollectionSupplementaryView.swift */,
+				AF89537A1C7D6DBC009B8FD4 /* CollectionViewCell.swift */,
+				AF8953781C7D6CAF009B8FD4 /* CollectionViewController.swift */,
 				AF89536D1C7D6C3F009B8FD4 /* Assets.xcassets */,
 				AF89536F1C7D6C3F009B8FD4 /* LaunchScreen.storyboard */,
 				AF8953721C7D6C3F009B8FD4 /* Info.plist */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8953691C7D6C3F009B8FD4 /* ViewController.swift in Sources */,
+				AF89537D1C7D7677009B8FD4 /* CollectionSupplementaryView.swift in Sources */,
+				AF8953791C7D6CAF009B8FD4 /* CollectionViewController.swift in Sources */,
 				AF8953671C7D6C3F009B8FD4 /* AppDelegate.swift in Sources */,
+				AF89537B1C7D6DBC009B8FD4 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
