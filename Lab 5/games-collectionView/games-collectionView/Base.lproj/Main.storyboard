@@ -74,7 +74,13 @@
                             <outlet property="delegate" destination="w2D-dY-xIt" id="hOK-fy-Avt"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Game Boxes" id="3Gp-sT-0uT"/>
+                    <navigationItem key="navigationItem" title="Game Boxes" id="3Gp-sT-0uT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="JOf-RB-9Z7">
+                            <connections>
+                                <action selector="share:" destination="w2D-dY-xIt" id="Cgr-EP-miB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCK-4e-zYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

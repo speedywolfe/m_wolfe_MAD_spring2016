@@ -13,6 +13,8 @@ private let reuseIdentifier = "Cell"
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var gameImages = [String]()
     let sectionInsets = UIEdgeInsets(top: 25.0, left: 10.0, bottom: 25.0, right: 10.0)
+    var sharing = false
+    var selectedImages = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,15 +100,52 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             detailVC.imageName = gameImages[(indexPath?.row)!]
         }
     }
+    
+    @IBAction func share(sender: AnyObject) {
+        var imageArray = [UIImage]()
+        if !selectedImages.isEmpty {
+            for imageName in selectedImages {
+                imageArray.append(UIImage(named: imageName)!)
+            }
+            let shareScreen = UIActivityViewController(activityItems: imageArray, applicationActivities: nil)
+            shareScreen.modalPresentationStyle = .Popover
+            shareScreen.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+            presentViewController(shareScreen, animated: true, completion: nil)
+        }
+        
+        sharing = !sharing
+        collectionView?.allowsMultipleSelection = sharing
+        collectionView?.selectItemAtIndexPath(nil, animated: true, scrollPosition: .None)
+        
+        if !sharing {
+            for cell in (collectionView?.visibleCells())! {
+                cell.backgroundColor = UIColor.blackColor()
+            }
+            selectedImages.removeAll(keepCapacity: false)
+        }
+    }
+    
 
     // MARK: UICollectionViewDelegate
 
-    /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        if sharing {
+            let image = gameImages[indexPath.row]
+            if let foundIndex = selectedImages.indexOf(gameImages[indexPath.row]) {
+                selectedImages.removeAtIndex(foundIndex)
+                collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.blackColor()
+            }
+            else {
+                selectedImages.append(image)
+                collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.orangeColor()
+            }
+        }
+        else {
+            self.performSegueWithIdentifier("showDetail", sender: collectionView.cellForItemAtIndexPath(indexPath))
+        }
+        return false
     }
-    */
 
     /*
     // Uncomment this method to specify if the specified item should be selected
