@@ -68,7 +68,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     func collectionView(CollectionView: UICollectionView, layout CollectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) ->CGSize {
         let image = UIImage(named: gameImages[indexPath.row])
         
-        let newSize:CGSize = CGSize(width: (image?.size.width)!/8, height: (image?.size.height)!/8)
+        let newSize:CGSize = CGSize(width: (image?.size.width)!/4, height: (image?.size.height)!/4)
         let rect = CGRectMake(0, 0, newSize.width, newSize.height)
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
         image?.drawInRect(rect)
@@ -89,6 +89,14 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return sectionInsets
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail" {
+            let indexPath = collectionView?.indexPathForCell(sender as! CollectionViewCell)
+            let detailVC = segue.destinationViewController as! DetailViewController
+            detailVC.imageName = gameImages[(indexPath?.row)!]
+        }
     }
 
     // MARK: UICollectionViewDelegate

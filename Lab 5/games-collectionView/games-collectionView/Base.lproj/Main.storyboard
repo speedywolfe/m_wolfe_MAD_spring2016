@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w2D-dY-xIt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v7H-Jm-YPH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Game Boxes-->
         <scene sceneID="smF-Zd-LMk">
             <objects>
                 <collectionViewController id="w2D-dY-xIt" customClass="CollectionViewController" customModule="games_collectionView" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gFj-gw-g1H" customClass="CollectionViewCell" customModule="games_collectionView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="104" height="104"/>
+                                <rect key="frame" x="0.0" y="114" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
@@ -42,11 +42,12 @@
                                 <size key="customSize" width="104" height="104"/>
                                 <connections>
                                     <outlet property="imageView" destination="thZ-I0-spp" id="E4z-ZT-TyI"/>
+                                    <segue destination="Qc3-Gz-BIs" kind="show" identifier="showDetail" id="SKC-8R-Sjp"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="lLY-gb-Ch6" customClass="CollectionSupplementaryView" customModule="games_collectionView" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51o-Ie-fDE">
@@ -73,8 +74,59 @@
                             <outlet property="delegate" destination="w2D-dY-xIt" id="hOK-fy-Avt"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Game Boxes" id="3Gp-sT-0uT"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCK-4e-zYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491" y="652"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="o9C-tY-K8B">
+            <objects>
+                <viewController id="Qc3-Gz-BIs" customClass="DetailViewController" customModule="games_collectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K5G-tg-f1o"/>
+                        <viewControllerLayoutGuide type="bottom" id="9vq-wV-X7E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQt-bL-Ath">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npj-Hf-jhu">
+                                <rect key="frame" x="-5" y="89" width="605" height="511"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Npj-Hf-jhu" firstAttribute="top" secondItem="K5G-tg-f1o" secondAttribute="bottom" constant="69" id="6SS-JC-Plm"/>
+                            <constraint firstItem="Npj-Hf-jhu" firstAttribute="leading" secondItem="gQt-bL-Ath" secondAttribute="leadingMargin" constant="-25" id="N2b-4s-yaY"/>
+                            <constraint firstItem="Npj-Hf-jhu" firstAttribute="bottom" secondItem="9vq-wV-X7E" secondAttribute="top" id="WRF-aH-gDO"/>
+                            <constraint firstAttribute="trailing" secondItem="Npj-Hf-jhu" secondAttribute="trailing" id="gX2-M1-bqW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Npj-Hf-jhu" id="z8s-FQ-rgj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMF-Cp-P9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218" y="652"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7t8-0r-rRo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v7H-Jm-YPH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2J-wG-bj3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w2D-dY-xIt" kind="relationship" relationship="rootViewController" id="OVk-iF-hWY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apg-hE-UiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="679" y="652"/>
         </scene>
