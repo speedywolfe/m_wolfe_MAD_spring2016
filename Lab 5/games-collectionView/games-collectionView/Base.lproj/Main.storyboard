@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Game Boxes-->
+        <!--What's your favorite game?-->
         <scene sceneID="smF-Zd-LMk">
             <objects>
                 <collectionViewController id="w2D-dY-xIt" customClass="CollectionViewController" customModule="games_collectionView" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <outlet property="delegate" destination="w2D-dY-xIt" id="hOK-fy-Avt"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Game Boxes" id="3Gp-sT-0uT">
+                    <navigationItem key="navigationItem" title="What's your favorite game?" id="3Gp-sT-0uT">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="JOf-RB-9Z7">
                             <connections>
                                 <action selector="share:" destination="w2D-dY-xIt" id="Cgr-EP-miB"/>

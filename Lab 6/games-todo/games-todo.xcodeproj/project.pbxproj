@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFA07A0C1C821917007FAA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A0B1C821917007FAA6D /* AppDelegate.swift */; };
+		AFA07A0E1C821917007FAA6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A0D1C821917007FAA6D /* ViewController.swift */; };
+		AFA07A111C821917007FAA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA07A0F1C821917007FAA6D /* Main.storyboard */; };
+		AFA07A131C821917007FAA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA07A121C821917007FAA6D /* Assets.xcassets */; };
+		AFA07A161C821917007FAA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA07A141C821917007FAA6D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AFA07A081C821917007FAA6D /* games-todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "games-todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA07A0B1C821917007FAA6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFA07A0D1C821917007FAA6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFA07A101C821917007FAA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFA07A121C821917007FAA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFA07A151C821917007FAA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFA07A171C821917007FAA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFA07A051C821917007FAA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFA079FF1C821917007FAA6D = {
+			isa = PBXGroup;
+			children = (
+				AFA07A0A1C821917007FAA6D /* games-todo */,
+				AFA07A091C821917007FAA6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFA07A091C821917007FAA6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFA07A081C821917007FAA6D /* games-todo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFA07A0A1C821917007FAA6D /* games-todo */ = {
+			isa = PBXGroup;
+			children = (
+				AFA07A0B1C821917007FAA6D /* AppDelegate.swift */,
+				AFA07A0D1C821917007FAA6D /* ViewController.swift */,
+				AFA07A0F1C821917007FAA6D /* Main.storyboard */,
+				AFA07A121C821917007FAA6D /* Assets.xcassets */,
+				AFA07A141C821917007FAA6D /* LaunchScreen.storyboard */,
+				AFA07A171C821917007FAA6D /* Info.plist */,
+			);
+			path = "games-todo";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFA07A071C821917007FAA6D /* games-todo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFA07A1A1C821917007FAA6D /* Build configuration list for PBXNativeTarget "games-todo" */;
+			buildPhases = (
+				AFA07A041C821917007FAA6D /* Sources */,
+				AFA07A051C821917007FAA6D /* Frameworks */,
+				AFA07A061C821917007FAA6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "games-todo";
+			productName = "games-todo";
+			productReference = AFA07A081C821917007FAA6D /* games-todo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFA07A001C821917007FAA6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mitchell Wolfe";
+				TargetAttributes = {
+					AFA07A071C821917007FAA6D = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 22RA866XNK;
+					};
+				};
+			};
+			buildConfigurationList = AFA07A031C821917007FAA6D /* Build configuration list for PBXProject "games-todo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFA079FF1C821917007FAA6D;
+			productRefGroup = AFA07A091C821917007FAA6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFA07A071C821917007FAA6D /* games-todo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFA07A061C821917007FAA6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA07A161C821917007FAA6D /* LaunchScreen.storyboard in Resources */,
+				AFA07A131C821917007FAA6D /* Assets.xcassets in Resources */,
+				AFA07A111C821917007FAA6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFA07A041C821917007FAA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA07A0E1C821917007FAA6D /* ViewController.swift in Sources */,
+				AFA07A0C1C821917007FAA6D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AFA07A0F1C821917007FAA6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFA07A101C821917007FAA6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFA07A141C821917007FAA6D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFA07A151C821917007FAA6D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFA07A181C821917007FAA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFA07A191C821917007FAA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFA07A1B1C821917007FAA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "games-todo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mitchellwolfe.games-todo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AFA07A1C1C821917007FAA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "games-todo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mitchellwolfe.games-todo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFA07A031C821917007FAA6D /* Build configuration list for PBXProject "games-todo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFA07A181C821917007FAA6D /* Debug */,
+				AFA07A191C821917007FAA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFA07A1A1C821917007FAA6D /* Build configuration list for PBXNativeTarget "games-todo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFA07A1B1C821917007FAA6D /* Debug */,
+				AFA07A1C1C821917007FAA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFA07A001C821917007FAA6D /* Project object */;
+}
