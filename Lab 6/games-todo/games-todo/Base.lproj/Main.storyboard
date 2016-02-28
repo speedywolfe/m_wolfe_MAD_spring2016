@@ -69,28 +69,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiF-8Z-aQG">
-                                <rect key="frame" x="27" y="141" width="294" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title of Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiF-8Z-aQG">
+                                <rect key="frame" x="64" y="84" width="472" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA2-gi-3yd">
-                                <rect key="frame" x="264" y="212" width="73" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA2-gi-3yd">
+                                <rect key="frame" x="264" y="231" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7cm-HP-uqH">
-                                <rect key="frame" x="0.0" y="266" width="600" height="274"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7cm-HP-uqH">
+                                <rect key="frame" x="0.0" y="276" width="600" height="324"/>
                                 <date key="date" timeIntervalSinceReferenceDate="478288646.810543">
                                     <!--2016-02-27 17:57:26 +0000-->
                                 </date>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEk-ul-6DE">
-                                <rect key="frame" x="371" y="138" width="214" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEk-ul-6DE">
+                                <rect key="frame" x="153" y="151" width="295" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="214" id="KPn-T0-nfc"/>
+                                    <constraint firstAttribute="width" constant="295" id="KPn-T0-nfc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -98,17 +98,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qA2-gi-3yd" firstAttribute="top" secondItem="WiF-8Z-aQG" secondAttribute="bottom" constant="50" id="5tp-JS-O05"/>
-                            <constraint firstItem="DdY-5A-kB5" firstAttribute="top" secondItem="7cm-HP-uqH" secondAttribute="bottom" constant="60" id="6sb-RC-81T"/>
+                            <constraint firstItem="SEk-ul-6DE" firstAttribute="top" secondItem="WiF-8Z-aQG" secondAttribute="bottom" constant="20" id="0YU-Cr-q8i"/>
+                            <constraint firstItem="DdY-5A-kB5" firstAttribute="top" secondItem="7cm-HP-uqH" secondAttribute="bottom" id="6sb-RC-81T"/>
                             <constraint firstAttribute="trailing" secondItem="7cm-HP-uqH" secondAttribute="trailing" id="7sR-RX-bdT"/>
-                            <constraint firstItem="SEk-ul-6DE" firstAttribute="top" secondItem="f0l-DC-8Od" secondAttribute="bottom" constant="74" id="IMh-Jn-huY"/>
-                            <constraint firstItem="SEk-ul-6DE" firstAttribute="centerY" secondItem="WiF-8Z-aQG" secondAttribute="centerY" constant="1.5" id="NGL-Cw-aNZ"/>
+                            <constraint firstItem="WiF-8Z-aQG" firstAttribute="centerX" secondItem="T1T-h2-K7x" secondAttribute="centerX" id="Czx-QV-bGs"/>
+                            <constraint firstItem="SEk-ul-6DE" firstAttribute="centerX" secondItem="T1T-h2-K7x" secondAttribute="centerX" id="DB4-iS-vej"/>
                             <constraint firstItem="7cm-HP-uqH" firstAttribute="leading" secondItem="T1T-h2-K7x" secondAttribute="leading" id="Xub-ND-cK6"/>
-                            <constraint firstItem="WiF-8Z-aQG" firstAttribute="leading" secondItem="T1T-h2-K7x" secondAttribute="leadingMargin" constant="7" id="bZx-w4-stM"/>
-                            <constraint firstItem="SEk-ul-6DE" firstAttribute="leading" secondItem="WiF-8Z-aQG" secondAttribute="trailing" constant="50" id="beC-pY-dbl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SEk-ul-6DE" secondAttribute="trailing" constant="-5" id="d7v-5u-kwp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SEk-ul-6DE" secondAttribute="trailing" constant="132" id="d7v-5u-kwp"/>
+                            <constraint firstItem="qA2-gi-3yd" firstAttribute="top" secondItem="SEk-ul-6DE" secondAttribute="bottom" constant="40" id="jOS-t9-7Cc"/>
                             <constraint firstItem="qA2-gi-3yd" firstAttribute="centerX" secondItem="7cm-HP-uqH" secondAttribute="centerX" id="m9R-gp-wAg"/>
-                            <constraint firstItem="7cm-HP-uqH" firstAttribute="top" secondItem="qA2-gi-3yd" secondAttribute="bottom" constant="33" id="sAa-tF-blD"/>
+                            <constraint firstItem="7cm-HP-uqH" firstAttribute="top" secondItem="qA2-gi-3yd" secondAttribute="bottom" constant="24" id="sAa-tF-blD"/>
+                            <constraint firstItem="WiF-8Z-aQG" firstAttribute="top" secondItem="f0l-DC-8Od" secondAttribute="bottom" constant="20" id="yzs-87-ZRL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game to Play" id="BIM-vp-QFX">
