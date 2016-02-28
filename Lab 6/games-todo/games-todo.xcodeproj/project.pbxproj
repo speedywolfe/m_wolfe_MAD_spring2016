@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		AFA07A0C1C821917007FAA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A0B1C821917007FAA6D /* AppDelegate.swift */; };
-		AFA07A0E1C821917007FAA6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A0D1C821917007FAA6D /* ViewController.swift */; };
 		AFA07A111C821917007FAA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA07A0F1C821917007FAA6D /* Main.storyboard */; };
 		AFA07A131C821917007FAA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA07A121C821917007FAA6D /* Assets.xcassets */; };
 		AFA07A161C821917007FAA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA07A141C821917007FAA6D /* LaunchScreen.storyboard */; };
+		AFA07A1E1C821B36007FAA6D /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A1D1C821B36007FAA6D /* ToDoTableViewController.swift */; };
+		AFA07A201C821B61007FAA6D /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A1F1C821B61007FAA6D /* ItemViewController.swift */; };
+		AFA07A241C822335007FAA6D /* TodoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA07A231C822335007FAA6D /* TodoGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AFA07A081C821917007FAA6D /* games-todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "games-todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA07A0B1C821917007FAA6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFA07A0D1C821917007FAA6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFA07A101C821917007FAA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFA07A121C821917007FAA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA07A151C821917007FAA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFA07A171C821917007FAA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA07A1D1C821B36007FAA6D /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		AFA07A1F1C821B61007FAA6D /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		AFA07A231C822335007FAA6D /* TodoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoGame.swift; path = ../TodoGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				AFA07A0B1C821917007FAA6D /* AppDelegate.swift */,
-				AFA07A0D1C821917007FAA6D /* ViewController.swift */,
+				AFA07A231C822335007FAA6D /* TodoGame.swift */,
 				AFA07A0F1C821917007FAA6D /* Main.storyboard */,
+				AFA07A1D1C821B36007FAA6D /* ToDoTableViewController.swift */,
+				AFA07A1F1C821B61007FAA6D /* ItemViewController.swift */,
 				AFA07A121C821917007FAA6D /* Assets.xcassets */,
 				AFA07A141C821917007FAA6D /* LaunchScreen.storyboard */,
 				AFA07A171C821917007FAA6D /* Info.plist */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA07A0E1C821917007FAA6D /* ViewController.swift in Sources */,
 				AFA07A0C1C821917007FAA6D /* AppDelegate.swift in Sources */,
+				AFA07A241C822335007FAA6D /* TodoGame.swift in Sources */,
+				AFA07A1E1C821B36007FAA6D /* ToDoTableViewController.swift in Sources */,
+				AFA07A201C821B61007FAA6D /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
