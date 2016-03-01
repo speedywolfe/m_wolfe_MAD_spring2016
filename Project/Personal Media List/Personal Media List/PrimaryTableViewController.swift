@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PrimaryTableViewController: UITableViewController {
     
-    var mediaList = Media()
+    let realm = try! Realm()
+    var categories: Results<Category>!
+    var selectedCategory: Category!
+    
+//    var mediaList = Media()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        categories = realm.objects(Category)
+        populateInitialCategories()
+        print(categories)
+        print(Realm.Configuration.defaultConfiguration.path!)
         
-        let path = NSBundle.mainBundle().pathForResource("media", ofType: "plist")
-        mediaList.allData = NSDictionary(contentsOfFile: path!) as! [String : [String]]
-        mediaList.types = Array(mediaList.allData.keys)
+//        let path = NSBundle.mainBundle().pathForResource("media", ofType: "plist")
+//        mediaList.allData = NSDictionary(contentsOfFile: path!) as! [String : [String]]
+//        mediaList.types = Array(mediaList.allData.keys)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,6 +39,24 @@ class PrimaryTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func populateInitialCategories() {
+        if categories.count == 0 {
+            
+            try! realm.write() {
+                
+                let defaultCategories = ["Movies", "TV Shows", "Games", "Books"]
+                
+                for category in defaultCategories {
+                    let newCategory = Category()
+                    newCategory.name = category
+                    self.realm.add(newCategory)
+                }
+            }
+            
+            categories = realm.objects(Category)
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -38,15 +65,21 @@ class PrimaryTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mediaList.allData.count
+        return categories.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = mediaList.types[indexPath.row]
+        let category = categories[indexPath.row]
+        cell.textLabel?.text = category.name
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        selectedCategory = categories[indexPath.row]
+        return indexPath
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -54,9 +87,13 @@ class PrimaryTableViewController: UITableViewController {
             let detailVC = segue.destinationViewController as! SecondaryTableViewController
             let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             
-            detailVC.title = mediaList.types[indexPath!.row]
-            detailVC.typeListDetail = mediaList
-            detailVC.selectedItem = indexPath!.row
+            let category = categories[indexPath!.row]
+            detailVC.title = category.name
+            
+            detailVC.selectedCategory = selectedCategory
+//            detailVC.title = mediaList.types[indexPath!.row]
+//            detailVC.typeListDetail = mediaList
+//            detailVC.selectedItem = indexPath!.row
         }
     }
 

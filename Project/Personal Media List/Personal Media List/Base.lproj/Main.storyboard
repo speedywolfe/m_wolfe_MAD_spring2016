@@ -63,11 +63,64 @@
                             <outlet property="delegate" destination="vJY-r6-8ts" id="mhq-uW-pUX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dh1-XS-9dt"/>
+                    <navigationItem key="navigationItem" id="dh1-XS-9dt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUf-1E-D3d">
+                            <connections>
+                                <segue destination="8Oc-jK-aCv" kind="show" id="RdD-1M-uwE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7j-sS-Qtj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237" y="631"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="Y2u-5T-oSn">
+            <objects>
+                <viewController id="i9h-vc-GH8" customClass="AddItemViewController" customModule="Personal_Media_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uJI-lc-aib"/>
+                        <viewControllerLayoutGuide type="bottom" id="G3B-yw-rtn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4S7-i5-Geg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-xY-4P2">
+                                <rect key="frame" x="202" y="101" width="197" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-7C-3aF">
+                                <rect key="frame" x="198" y="209" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tQA-AE-3ND">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="6qk-I6-IJ6">
+                            <connections>
+                                <segue destination="gdH-2O-hy1" kind="unwind" identifier="cancel" unwindAction="unwindSegue:" id="Ulo-0m-RZj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="G6y-bl-9UZ">
+                            <connections>
+                                <segue destination="gdH-2O-hy1" kind="unwind" identifier="save" unwindAction="unwindSegue:" id="PYX-Mu-vFR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="TUx-7C-3aF" id="U4B-N9-rfC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iec-zT-OcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gdH-2O-hy1" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3049" y="1407"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Rtm-ia-RBj">
@@ -123,6 +176,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YV-dX-APe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3019" y="631"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lW6-vq-Opk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Oc-jK-aCv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLK-mr-NXo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i9h-vc-GH8" kind="relationship" relationship="rootViewController" id="SNS-8T-Mab"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZP-YZ-NBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237" y="1407"/>
         </scene>
     </scenes>
 </document>

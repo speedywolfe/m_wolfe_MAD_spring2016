@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Media {
-    var allData = [String : [String]]()
-    var types = [String]()
+class Media: Object {
+    dynamic var name = ""
+    
+    
+//    dynamic var allData = [String : [String]]()
+//    dynamic var types = [String]()
 }
