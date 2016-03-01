@@ -8,20 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		AFE1343E1C854E170012894D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1343D1C854E170012894D /* AppDelegate.swift */; };
-		AFE134401C854E170012894D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1343F1C854E170012894D /* ViewController.swift */; };
 		AFE134431C854E170012894D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE134411C854E170012894D /* Main.storyboard */; };
 		AFE134451C854E170012894D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE134441C854E170012894D /* Assets.xcassets */; };
 		AFE134481C854E170012894D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE134461C854E170012894D /* LaunchScreen.storyboard */; };
+		AFE134501C854F300012894D /* PrimaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1344F1C854F300012894D /* PrimaryTableViewController.swift */; };
+		AFE134521C85519B0012894D /* SecondaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE134511C85519B0012894D /* SecondaryTableViewController.swift */; };
+		AFE134551C8553200012894D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE134531C8553200012894D /* Realm.framework */; };
+		AFE134561C8553200012894D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFE134531C8553200012894D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFE134571C8553200012894D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE134541C8553200012894D /* RealmSwift.framework */; };
+		AFE134581C8553200012894D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFE134541C8553200012894D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFE1345B1C8557100012894D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1345A1C8557100012894D /* DetailViewController.swift */; };
+		AFE1345D1C8559970012894D /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1345C1C8559970012894D /* Media.swift */; };
+		AFE1345F1C855B810012894D /* media.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE1345E1C855B810012894D /* media.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AFE134591C8553200012894D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AFE134581C8553200012894D /* RealmSwift.framework in Embed Frameworks */,
+				AFE134561C8553200012894D /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AFE1343A1C854E170012894D /* Personal Media List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Media List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE1343D1C854E170012894D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFE1343F1C854E170012894D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFE134421C854E170012894D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFE134441C854E170012894D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE134471C854E170012894D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFE134491C854E170012894D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE1344F1C854F300012894D /* PrimaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryTableViewController.swift; sourceTree = "<group>"; };
+		AFE134511C85519B0012894D /* SecondaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryTableViewController.swift; sourceTree = "<group>"; };
+		AFE134531C8553200012894D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		AFE134541C8553200012894D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		AFE1345A1C8557100012894D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AFE1345C1C8559970012894D /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		AFE1345E1C855B810012894D /* media.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = media.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE134571C8553200012894D /* RealmSwift.framework in Frameworks */,
+				AFE134551C8553200012894D /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +69,8 @@
 		AFE134311C854E160012894D = {
 			isa = PBXGroup;
 			children = (
+				AFE134531C8553200012894D /* Realm.framework */,
+				AFE134541C8553200012894D /* RealmSwift.framework */,
 				AFE1343C1C854E170012894D /* Personal Media List */,
 				AFE1343B1C854E170012894D /* Products */,
 			);
@@ -55,10 +88,14 @@
 			isa = PBXGroup;
 			children = (
 				AFE1343D1C854E170012894D /* AppDelegate.swift */,
-				AFE1343F1C854E170012894D /* ViewController.swift */,
+				AFE1344F1C854F300012894D /* PrimaryTableViewController.swift */,
+				AFE134511C85519B0012894D /* SecondaryTableViewController.swift */,
 				AFE134411C854E170012894D /* Main.storyboard */,
+				AFE1345C1C8559970012894D /* Media.swift */,
+				AFE1345A1C8557100012894D /* DetailViewController.swift */,
 				AFE134441C854E170012894D /* Assets.xcassets */,
 				AFE134461C854E170012894D /* LaunchScreen.storyboard */,
+				AFE1345E1C855B810012894D /* media.plist */,
 				AFE134491C854E170012894D /* Info.plist */,
 			);
 			path = "Personal Media List";
@@ -74,6 +111,7 @@
 				AFE134361C854E170012894D /* Sources */,
 				AFE134371C854E170012894D /* Frameworks */,
 				AFE134381C854E170012894D /* Resources */,
+				AFE134591C8553200012894D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +163,7 @@
 			files = (
 				AFE134481C854E170012894D /* LaunchScreen.storyboard in Resources */,
 				AFE134451C854E170012894D /* Assets.xcassets in Resources */,
+				AFE1345F1C855B810012894D /* media.plist in Resources */,
 				AFE134431C854E170012894D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE134401C854E170012894D /* ViewController.swift in Sources */,
+				AFE134501C854F300012894D /* PrimaryTableViewController.swift in Sources */,
+				AFE134521C85519B0012894D /* SecondaryTableViewController.swift in Sources */,
 				AFE1343E1C854E170012894D /* AppDelegate.swift in Sources */,
+				AFE1345B1C8557100012894D /* DetailViewController.swift in Sources */,
+				AFE1345D1C8559970012894D /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +290,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Personal Media List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mitchellwolfe.Personal-Media-List";
@@ -259,6 +305,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Personal Media List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mitchellwolfe.Personal-Media-List";
