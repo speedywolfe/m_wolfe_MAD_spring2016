@@ -21,7 +21,7 @@ class PrimaryTableViewController: UITableViewController {
         super.viewDidLoad()
         categories = realm.objects(Category)
         populateInitialCategories()
-        print(categories)
+        
         print(Realm.Configuration.defaultConfiguration.path!)
         
 //        let path = NSBundle.mainBundle().pathForResource("media", ofType: "plist")
@@ -40,6 +40,7 @@ class PrimaryTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // http://www.raywenderlich.com/112544/realm-tutorial-getting-started
     func populateInitialCategories() {
         if categories.count == 0 {
             

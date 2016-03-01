@@ -11,7 +11,7 @@ import RealmSwift
 
 class AddItemViewController: UIViewController {
     
-    var item: Media!
+    var itemToAdd: Media!
     
     @IBOutlet weak var nameTextField: UITextField!
 
@@ -30,21 +30,13 @@ class AddItemViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "save" {
             if ((nameTextField.text?.isEmpty) == false) {
-                self.addNewItem()
+                let newItem = Media()
+                newItem.name = nameTextField.text!
+                itemToAdd = newItem                
             }
         }
     }
     
-    func addNewItem() {
-        let realm = try! Realm()
-        
-        try! realm.write {
-            let newItem = Media()
-            
-            newItem.name = nameTextField.text!
-        }
-    }
-
     /*
     // MARK: - Navigation
 

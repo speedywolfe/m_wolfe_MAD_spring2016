@@ -29,7 +29,6 @@ class SecondaryTableViewController: UITableViewController {
 //        typeListDetail.types = Array(typeListDetail.allData.keys)
 //        let chosenItem = typeListDetail.types[selectedItem]
 //        items = typeListDetail.allData[chosenItem]! as [String]
-        print(selectedCategory)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +49,8 @@ class SecondaryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-//        cell.textLabel?.text = items[indexPath.row]
+        let cellItem = items[indexPath.row]
+        cell.textLabel?.text = cellItem.name
 
         return cell
     }
@@ -61,12 +61,25 @@ class SecondaryTableViewController: UITableViewController {
         return true
     }
     
-//    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-//        if segue.identifier == "done" {
-//            let source = segue.sourceViewController as! AddItemViewController
-//            if ((source.item)
-//        }
-//    }
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        let realm = try! Realm()
+        
+        print("got here")
+        
+        if segue.identifier == "save" {
+            print("inside segue")
+            let source = segue.sourceViewController as! AddItemViewController
+            if (source.itemToAdd != nil) {
+                try! realm.write {
+                    let addedItem = source.itemToAdd
+                    print(addedItem)
+                    realm.add(addedItem)
+                }
+            }
+        }
+    }
+    
+    
 
     // Override to support editing the table view.
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -93,11 +106,11 @@ class SecondaryTableViewController: UITableViewController {
 //        typeListDetail.allData[chosenItem]?.insert(moveItem, atIndex: toRow)
 //    }
 
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
+//    // Override to support conditional rearranging of the table view.
+//    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        // Return false if you do not want the item to be re-orderable.
+//        return false
+//    }
 
     /*
     // MARK: - Navigation

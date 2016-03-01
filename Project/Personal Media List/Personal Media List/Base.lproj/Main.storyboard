@@ -87,19 +87,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-xY-4P2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-xY-4P2">
                                 <rect key="frame" x="202" y="101" width="197" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="BOK-g7-4Pp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-7C-3aF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-7C-3aF">
                                 <rect key="frame" x="198" y="209" width="205" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="PZZ-ki-HWa"/>
+                                    <constraint firstAttribute="height" constant="30" id="qRp-my-C18"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TUx-7C-3aF" firstAttribute="centerX" secondItem="4S7-i5-Geg" secondAttribute="centerX" id="XOi-Oy-tG5"/>
+                            <constraint firstItem="G3B-yw-rtn" firstAttribute="top" secondItem="TUx-7C-3aF" secondAttribute="bottom" constant="361" id="Zjm-ZJ-Uev"/>
+                            <constraint firstItem="TUx-7C-3aF" firstAttribute="top" secondItem="4eK-xY-4P2" secondAttribute="bottom" constant="58" id="dQW-co-sXI"/>
+                            <constraint firstItem="4eK-xY-4P2" firstAttribute="top" secondItem="uJI-lc-aib" secondAttribute="bottom" constant="37" id="oOa-B4-LmX"/>
+                            <constraint firstItem="4eK-xY-4P2" firstAttribute="centerX" secondItem="TUx-7C-3aF" secondAttribute="centerX" id="sVK-pW-baq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tQA-AE-3ND">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="6qk-I6-IJ6">

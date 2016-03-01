@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Media: Object {
-    dynamic var name = ""
+    var name = ""
     
     
 //    dynamic var allData = [String : [String]]()
