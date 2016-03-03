@@ -12,6 +12,7 @@ import RealmSwift
 class SecondaryTableViewController: UITableViewController {
     
     var items = [Media]()
+    var retrieved = try! Realm().objects(Media)
     var selectedCategory: Category!
     var selectedItem = 0
     var typeListDetail = Media()
@@ -23,12 +24,20 @@ class SecondaryTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
 //        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        retrieveData()
+        tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {
 //        typeListDetail.types = Array(typeListDetail.allData.keys)
 //        let chosenItem = typeListDetail.types[selectedItem]
 //        items = typeListDetail.allData[chosenItem]! as [String]
+        
+//        print(items)
+//        print("After first print")
+        retrieveData()
+        tableView.reloadData()
+//        print(items)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +59,10 @@ class SecondaryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let cellItem = items[indexPath.row]
+        print(cellItem)
+        print(cellItem.name)
         cell.textLabel?.text = cellItem.name
+        print(cell.textLabel?.text)
 
         return cell
     }
@@ -64,22 +76,24 @@ class SecondaryTableViewController: UITableViewController {
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         let realm = try! Realm()
         
-        print("got here")
-        
         if segue.identifier == "save" {
-            print("inside segue")
             let source = segue.sourceViewController as! AddItemViewController
             if (source.itemToAdd != nil) {
                 try! realm.write {
                     let addedItem = source.itemToAdd
-                    print(addedItem)
                     realm.add(addedItem)
                 }
             }
         }
     }
     
-    
+    func retrieveData() {
+        retrieved = try! Realm().objects(Media)
+        
+        for dataItem in retrieved {
+            items.append(dataItem)
+        }
+    }
 
     // Override to support editing the table view.
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

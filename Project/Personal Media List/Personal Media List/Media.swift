@@ -12,7 +12,9 @@ import RealmSwift
 class Media: Object {
     var name = ""
     
-    
+    func returnName() -> String {
+        return name
+    }
 //    dynamic var allData = [String : [String]]()
 //    dynamic var types = [String]()
 }
