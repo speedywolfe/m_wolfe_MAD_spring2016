@@ -24,20 +24,11 @@ class SecondaryTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
 //        self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        retrieveData()
-        tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {
-//        typeListDetail.types = Array(typeListDetail.allData.keys)
-//        let chosenItem = typeListDetail.types[selectedItem]
-//        items = typeListDetail.allData[chosenItem]! as [String]
-        
-//        print(items)
-//        print("After first print")
         retrieveData()
         tableView.reloadData()
-//        print(items)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,10 +50,7 @@ class SecondaryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let cellItem = items[indexPath.row]
-        print(cellItem)
-        print(cellItem.name)
         cell.textLabel?.text = cellItem.name
-        print(cell.textLabel?.text)
 
         return cell
     }
@@ -90,6 +78,7 @@ class SecondaryTableViewController: UITableViewController {
     func retrieveData() {
         retrieved = try! Realm().objects(Media)
         
+        items.removeAll()
         for dataItem in retrieved {
             items.append(dataItem)
         }
