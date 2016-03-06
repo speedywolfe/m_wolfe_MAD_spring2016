@@ -40,7 +40,7 @@ class PrimaryTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // http://www.raywenderlich.com/112544/realm-tutorial-getting-started
+    /* http://www.raywenderlich.com/112544/realm-tutorial-getting-started */
     func populateInitialCategories() {
         if categories.count == 0 {
             
@@ -90,6 +90,7 @@ class PrimaryTableViewController: UITableViewController {
             
             let category = categories[indexPath!.row]
             detailVC.title = category.name
+            detailVC.categoryString = category.name
             
             detailVC.selectedCategory = selectedCategory
 //            detailVC.title = mediaList.types[indexPath!.row]

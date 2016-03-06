@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var incomingItem = Media()
 
     override func viewDidLoad() {
         super.viewDidLoad()

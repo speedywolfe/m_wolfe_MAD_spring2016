@@ -12,13 +12,21 @@ import RealmSwift
 class AddItemViewController: UIViewController {
     
     var itemToAdd: Media!
+    var incomingType : String = ""
+    
+    @IBOutlet weak var addInfoLabel: UILabel!
     
     @IBOutlet weak var nameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print(incomingType)
+        addInfoLabel.text? = "Add new \(incomingType)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +40,7 @@ class AddItemViewController: UIViewController {
             if ((nameTextField.text?.isEmpty) == false) {
                 let newItem = Media()
                 newItem.name = nameTextField.text!
+                newItem.type = incomingType
                 itemToAdd = newItem                
             }
         }

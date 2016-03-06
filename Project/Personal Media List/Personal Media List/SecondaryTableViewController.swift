@@ -14,6 +14,7 @@ class SecondaryTableViewController: UITableViewController {
     var items = [Media]()
     var retrieved = try! Realm().objects(Media)
     var selectedCategory: Category!
+    var categoryString : String = ""
     var selectedItem = 0
     var typeListDetail = Media()
 
@@ -61,6 +62,26 @@ class SecondaryTableViewController: UITableViewController {
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Send object to detailview to show info for media
+        if segue.identifier == "detail" {
+            let detailVC = segue.destinationViewController as! DetailViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            
+            let data = items[indexPath!.row]
+            detailVC.title = data.name
+            detailVC.incomingItem = data
+        }
+        
+        if segue.identifier == "add" {
+            let navVC = segue.destinationViewController as! UINavigationController
+            let addVC = navVC.topViewController as! AddItemViewController
+            //let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            
+            addVC.incomingType = categoryString
+        }
+    }
+    
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         let realm = try! Realm()
         
@@ -75,20 +96,24 @@ class SecondaryTableViewController: UITableViewController {
         }
     }
     
+    // reload the data from the database into the array
     func retrieveData() {
         retrieved = try! Realm().objects(Media)
         
         items.removeAll()
         for dataItem in retrieved {
-            items.append(dataItem)
+            print(dataItem)
+            if(dataItem.type == categoryString) {
+                items.append(dataItem)
+            }
         }
     }
 
-    // Override to support editing the table view.
+     //Override to support editing the table view.
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if editingStyle == .Delete {
 //            // Delete the row from the data source
-//            let chosenItem = typeListDetail.types[selectedItem]
+//            let chosenItem = items[selectedItem]
 //            typeListDetail.allData[chosenItem]?.removeAtIndex(indexPath.row)
 //            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 //        } else if editingStyle == .Insert {

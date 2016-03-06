@@ -11,5 +11,6 @@ import RealmSwift
 
 class Media: Object {
     dynamic var name = ""
+    dynamic var type = ""
 }
 

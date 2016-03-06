@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +16,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        let config = RealmConfiguration.defaultConfiguration
+//        if let path = config.path {
+//            try NSFileManager().removeItemAtPath(path)
+//        }
         // Override point for customization after application launch.
+//        let config = Realm.Configuration(
+//            schemaVersion: 1,
+//            migrationBlock: { migration, oldSchemaVersion in
+//                if (oldSchemaVersion < 1) {
+//                    print(oldSchemaVersion)
+//                    
+//                }
+//            })
+//        Realm.Configuration.defaultConfiguration = config
+        
         return true
     }
+    
+//    public Realm buildDatabase(){
+//        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
+//    
+//        try {
+//            return Realm.getInstance(realmConfiguration);
+//        } catch (RealmMigrationNeededException e){
+//        try {
+//            Realm.deleteRealm(realmConfiguration);
+//            //Realm file has been deleted.
+//            return Realm.getInstance(realmConfiguration);
+//        } catch (Exception ex){
+//            throw ex;
+//            //No Realm file to remove.
+//            }
+//        }
+//    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
