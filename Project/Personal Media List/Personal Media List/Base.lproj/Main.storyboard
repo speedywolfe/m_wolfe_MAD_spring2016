@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Media-->
@@ -88,28 +87,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-7C-3aF">
-                                <rect key="frame" x="198" y="129" width="205" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="205" id="PZZ-ki-HWa"/>
-                                    <constraint firstAttribute="height" constant="30" id="qRp-my-C18"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igR-Un-g6n">
-                                <rect key="frame" x="321" y="84" width="0.0" height="0.0"/>
+                                <rect key="frame" x="198" y="100" width="205" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="cr4-97-kvP"/>
+                                    <constraint firstAttribute="width" constant="205" id="rbK-CK-Lh1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-7C-3aF">
+                                <rect key="frame" x="198" y="170" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TUx-7C-3aF" firstAttribute="centerX" secondItem="4S7-i5-Geg" secondAttribute="centerX" id="XOi-Oy-tG5"/>
-                            <constraint firstItem="G3B-yw-rtn" firstAttribute="top" secondItem="TUx-7C-3aF" secondAttribute="bottom" constant="441" id="Zjm-ZJ-Uev"/>
-                            <constraint firstAttribute="trailing" secondItem="igR-Un-g6n" secondAttribute="trailing" constant="279" id="sfV-QT-1Jx"/>
-                            <constraint firstItem="igR-Un-g6n" firstAttribute="top" secondItem="4S7-i5-Geg" secondAttribute="topMargin" constant="84" id="yR9-WN-8Wc"/>
+                            <constraint firstItem="igR-Un-g6n" firstAttribute="leading" secondItem="TUx-7C-3aF" secondAttribute="leading" id="MbW-dk-x0L"/>
+                            <constraint firstItem="igR-Un-g6n" firstAttribute="top" secondItem="uJI-lc-aib" secondAttribute="bottom" constant="36" id="YZS-j8-25P"/>
+                            <constraint firstItem="TUx-7C-3aF" firstAttribute="top" secondItem="igR-Un-g6n" secondAttribute="bottom" constant="32" id="dHs-f4-vpx"/>
+                            <constraint firstItem="TUx-7C-3aF" firstAttribute="centerX" secondItem="4S7-i5-Geg" secondAttribute="centerX" id="w97-Ni-EKp"/>
+                            <constraint firstItem="igR-Un-g6n" firstAttribute="trailing" secondItem="TUx-7C-3aF" secondAttribute="trailing" id="zon-di-T8R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tQA-AE-3ND">

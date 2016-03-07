@@ -4,7 +4,8 @@
 //
 //  Created by Mitchell Wolfe on 2/29/16.
 //  Copyright © 2016 Mitchell Wolfe. All rights reserved.
-//
+// app icon partial credit: Television by Alexandr Cherkinsky from the Noun Project
+// app icon partial credit: Video Game Controller by Joe Harrison from the Noun Project
 
 import UIKit
 import RealmSwift

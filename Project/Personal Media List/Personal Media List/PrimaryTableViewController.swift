@@ -15,19 +15,14 @@ class PrimaryTableViewController: UITableViewController {
     var categories: Results<Category>!
     var selectedCategory: Category!
     
-//    var mediaList = Media()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         categories = realm.objects(Category)
         populateInitialCategories()
         
-        print(Realm.Configuration.defaultConfiguration.path!)
+        //If you want path for realm database then uncomment this:
+        //print(Realm.Configuration.defaultConfiguration.path!)
         
-//        let path = NSBundle.mainBundle().pathForResource("media", ofType: "plist")
-//        mediaList.allData = NSDictionary(contentsOfFile: path!) as! [String : [String]]
-//        mediaList.types = Array(mediaList.allData.keys)
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -93,9 +88,6 @@ class PrimaryTableViewController: UITableViewController {
             detailVC.categoryString = category.name
             
             detailVC.selectedCategory = selectedCategory
-//            detailVC.title = mediaList.types[indexPath!.row]
-//            detailVC.typeListDetail = mediaList
-//            detailVC.selectedItem = indexPath!.row
         }
     }
 

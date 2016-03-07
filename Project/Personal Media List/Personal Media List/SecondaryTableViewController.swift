@@ -76,7 +76,6 @@ class SecondaryTableViewController: UITableViewController {
         if segue.identifier == "add" {
             let navVC = segue.destinationViewController as! UINavigationController
             let addVC = navVC.topViewController as! AddItemViewController
-            //let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             
             addVC.incomingType = categoryString
         }
