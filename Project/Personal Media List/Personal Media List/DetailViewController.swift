@@ -11,10 +11,19 @@ import UIKit
 class DetailViewController: UIViewController {
     var incomingItem = Media()
 
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        itemName.text? = incomingItem.name
+        let decoded : UIImage = UIImage(data: incomingItem.picture!)!
+        itemImage.image = decoded
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,12 +9,13 @@
 import UIKit
 import RealmSwift
 
-class AddItemViewController: UIViewController {
+class AddItemViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var itemToAdd: Media!
     var incomingType : String = ""
     
     @IBOutlet weak var addInfoLabel: UILabel!
+    @IBOutlet weak var imageDisplay: UIImageView!
     
     @IBOutlet weak var nameTextField: UITextField!
 
@@ -41,10 +42,30 @@ class AddItemViewController: UIViewController {
                 let newItem = Media()
                 newItem.name = nameTextField.text!
                 newItem.type = incomingType
-                itemToAdd = newItem                
+                if(imageDisplay.image != nil) {
+                    let imageData : NSData = UIImagePNGRepresentation(imageDisplay.image!)!
+                    newItem.picture = imageData
+                }
+                itemToAdd = newItem
             }
         }
     }
+    
+    // Got help with the photo stuff from: https://www.youtube.com/watch?v=YYS-LwvluL8 by user MstCode
+    @IBAction func photoButton(sender: UIButton) {
+        let imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        imgPicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        //print(imgPicker)
+        presentViewController(imgPicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imageDisplay.image = image
+        print(image)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation
