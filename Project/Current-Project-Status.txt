@@ -3,11 +3,11 @@ Current Project Status:
 Working:
 -can add media to lists
 -added media corresponds to list that it was added to automatically
--all media is automatically added to persistant database
+-all media is automatically added to persistent database
 -media can be deleted from list by swiping right
+-can add image from camera roll
 
 to do next:
--be able to add image from camera roll -> this might not be necessary because eventually the image with come from a database
 -grouped media within list by starting letter
 -more info per media item -> not sure quite what to do with this, would probably have to create subclasses for each media type for this to make sense
 -make media items like a todo list with media that you've consumed vs are consuming vs will consume
