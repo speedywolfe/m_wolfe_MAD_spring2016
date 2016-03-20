@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Movies</key>
+	<array>
+		<string>Inception</string>
+		<string>Zoolander</string>
+		<string>Revenant</string>
+		<string>The Congress</string>
+		<string>Donnie Darko</string>
+	</array>
+	<key>Games</key>
+	<array>
+		<string>The Legend of Zelda</string>
+		<string>Tomb Raider</string>
+		<string>Bloodborne</string>
+		<string>Shadow of the Colossus</string>
+		<string>Assassin&apos;s Creed</string>
+	</array>
+	<key>TV Shows</key>
+	<array>
+		<string>Walking Dead</string>
+		<string>True Detective</string>
+		<string>Sherlock</string>
+		<string>Parks and Recreation</string>
+		<string>Breaking Bad</string>
+	</array>
+	<key>Books</key>
+	<array>
+		<string>Name of the Wind</string>
+		<string>Eye of the World</string>
+		<string>Ender&apos;s Game</string>
+		<string>Wonder Boys</string>
+		<string>Saturn Run</string>
+	</array>
+</dict>
+</plist>
