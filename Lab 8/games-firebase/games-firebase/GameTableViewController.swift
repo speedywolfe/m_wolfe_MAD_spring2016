@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class GameTableViewController: UITableViewController {
+    let ref = Firebase(url: "https://mwolfe-games.firebaseio.com")
+    var games = [Game]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,26 @@ class GameTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        ref.observeEventType(FEventType.Value, withBlock: {snapshot in
+            self.games=[]
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                for item in snapshots {
+                    guard let gameName = item.value["name"] as? String,
+                    let gameUrl = item.value["url"] as? String
+                        else {
+                            continue
+                    }
+                    let newGame = Game(newname: gameName, newurl: gameUrl)
+                    self.games.append(newGame)
+                }
+            }
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,47 +52,52 @@ class GameTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return games.count
     }
     
-    @IBAction func unwindSegue(Segue: UIStoryboardSegue) {
-    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        if segue.identifier == "savesegue" {
+            let source = segue.sourceViewController as! AddViewController
+            if source.addedgame.isEmpty == false {
+                let newGame = Game(newname: source.addedgame, newurl: source.addedurl)
+                games.append(newGame)
+                let newGameDict = ["name": source.addedgame, "url": source.addedurl]
+                let gameref = ref.childByAppendingPath(source.addedgame)
+                gameref.setValue(newGameDict)
+            }
+        }
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("gamecell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let game = games[indexPath.row]
+        cell.textLabel!.text = game.name
 
         return cell
     }
-    */
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let recipe = games[indexPath.row]
+            let reciperef = ref.childByAppendingPath(recipe.name)
+            reciperef.ref.removeValue()
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.

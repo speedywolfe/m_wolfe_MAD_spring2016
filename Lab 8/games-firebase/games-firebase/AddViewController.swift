@@ -9,6 +9,8 @@
 import UIKit
 
 class AddViewController: UIViewController {
+    var addedgame = String()
+    var addedurl = String()
 
     @IBOutlet weak var gamename: UITextField!
     @IBOutlet weak var gameurl: UITextField!
@@ -22,6 +24,15 @@ class AddViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "savesegue" {
+            if gamename.text?.isEmpty == false {
+                addedgame = gamename.text!
+                addedurl = gameurl.text!
+            }
+        }
     }
     
 

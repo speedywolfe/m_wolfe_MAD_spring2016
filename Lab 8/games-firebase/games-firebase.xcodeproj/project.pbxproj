@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F64C851B6B3800470E0EFD1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902FA5247A1361FFD623A45E /* Pods.framework */; };
 		AF0399171CACCDD700989E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0399161CACCDD700989E43 /* AppDelegate.swift */; };
 		AF03991C1CACCDD700989E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF03991A1CACCDD700989E43 /* Main.storyboard */; };
 		AF03991E1CACCDD700989E43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF03991D1CACCDD700989E43 /* Assets.xcassets */; };
 		AF0399211CACCDD700989E43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF03991F1CACCDD700989E43 /* LaunchScreen.storyboard */; };
 		AF0399291CACD16600989E43 /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0399281CACD16600989E43 /* GameTableViewController.swift */; };
 		AF03992B1CACD19900989E43 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03992A1CACD19900989E43 /* AddViewController.swift */; };
+		AF9DED301CACD50D0029B1D7 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DED2F1CACD50D0029B1D7 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		902FA5247A1361FFD623A45E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52F7DCBD7BB4ABE9A5E6EC0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF0399131CACCDD700989E43 /* games-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "games-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0399161CACCDD700989E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF03991B1CACCDD700989E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		AF0399221CACCDD700989E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF0399281CACD16600989E43 /* GameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
 		AF03992A1CACD19900989E43 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AF9DED2F1CACD50D0029B1D7 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FA63FA56A68E6F9A5343CCF5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F64C851B6B3800470E0EFD1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26055F33683097A743E8C66A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				902FA5247A1361FFD623A45E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AD8114BC170762C94F0672B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA63FA56A68E6F9A5343CCF5 /* Pods.debug.xcconfig */,
+				A52F7DCBD7BB4ABE9A5E6EC0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF03990A1CACCDD600989E43 = {
 			isa = PBXGroup;
 			children = (
 				AF0399151CACCDD700989E43 /* games-firebase */,
 				AF0399141CACCDD700989E43 /* Products */,
+				8AD8114BC170762C94F0672B /* Pods */,
+				26055F33683097A743E8C66A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +85,7 @@
 				AF0399161CACCDD700989E43 /* AppDelegate.swift */,
 				AF0399281CACD16600989E43 /* GameTableViewController.swift */,
 				AF03992A1CACD19900989E43 /* AddViewController.swift */,
+				AF9DED2F1CACD50D0029B1D7 /* Game.swift */,
 				AF03991A1CACCDD700989E43 /* Main.storyboard */,
 				AF03991D1CACCDD700989E43 /* Assets.xcassets */,
 				AF03991F1CACCDD700989E43 /* LaunchScreen.storyboard */,
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF0399251CACCDD700989E43 /* Build configuration list for PBXNativeTarget "games-firebase" */;
 			buildPhases = (
+				4B3E9C8A25AFB45E7FADF9C8 /* Check Pods Manifest.lock */,
 				AF03990F1CACCDD700989E43 /* Sources */,
 				AF0399101CACCDD700989E43 /* Frameworks */,
 				AF0399111CACCDD700989E43 /* Resources */,
+				1F9928641DB560F78E5FF133 /* Embed Pods Frameworks */,
+				1E122540FC7B42277D5D6758 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +164,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E122540FC7B42277D5D6758 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F9928641DB560F78E5FF133 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B3E9C8A25AFB45E7FADF9C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF03990F1CACCDD700989E43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +220,7 @@
 				AF0399171CACCDD700989E43 /* AppDelegate.swift in Sources */,
 				AF0399291CACD16600989E43 /* GameTableViewController.swift in Sources */,
 				AF03992B1CACD19900989E43 /* AddViewController.swift in Sources */,
+				AF9DED301CACD50D0029B1D7 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +331,7 @@
 		};
 		AF0399261CACCDD700989E43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA63FA56A68E6F9A5343CCF5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "games-firebase/Info.plist";
@@ -263,6 +343,7 @@
 		};
 		AF0399271CACCDD700989E43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F7DCBD7BB4ABE9A5E6EC0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "games-firebase/Info.plist";
@@ -291,6 +372,7 @@
 				AF0399271CACCDD700989E43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
