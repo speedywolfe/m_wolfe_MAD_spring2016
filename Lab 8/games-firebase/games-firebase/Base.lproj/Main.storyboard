@@ -22,6 +22,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="R7y-RK-3g8" kind="show" identifier="showdetail" id="urj-w9-jmt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -151,6 +154,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLs-RC-O4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2312" y="545"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="01W-ki-ya4">
+            <objects>
+                <viewController id="R7y-RK-3g8" customClass="WebViewController" customModule="games_firebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlT-hK-blx"/>
+                        <viewControllerLayoutGuide type="bottom" id="qBX-Ud-atL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a0X-oo-bJU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmC-w1-71t">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5fN-mA-stL">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gmC-w1-71t" firstAttribute="top" secondItem="a0X-oo-bJU" secondAttribute="top" id="9Sc-Od-9Vs"/>
+                            <constraint firstItem="gmC-w1-71t" firstAttribute="centerX" secondItem="5fN-mA-stL" secondAttribute="centerX" id="BAv-tF-Rar"/>
+                            <constraint firstItem="gmC-w1-71t" firstAttribute="bottom" secondItem="qBX-Ud-atL" secondAttribute="top" id="GOX-hr-E0M"/>
+                            <constraint firstAttribute="trailing" secondItem="gmC-w1-71t" secondAttribute="trailing" id="PeZ-H8-ZHa"/>
+                            <constraint firstItem="gmC-w1-71t" firstAttribute="leading" secondItem="a0X-oo-bJU" secondAttribute="leading" id="S1t-zD-DgR"/>
+                            <constraint firstItem="gmC-w1-71t" firstAttribute="centerY" secondItem="5fN-mA-stL" secondAttribute="centerY" id="rBW-2O-iwa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webSpinner" destination="5fN-mA-stL" id="aHm-bm-fTe"/>
+                        <outlet property="webView" destination="gmC-w1-71t" id="4y5-18-ZRG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYK-Tu-C3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="1443"/>
         </scene>
     </scenes>
 </document>

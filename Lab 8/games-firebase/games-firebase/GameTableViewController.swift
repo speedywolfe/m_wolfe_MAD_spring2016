@@ -72,6 +72,16 @@ class GameTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showdetail" {
+            let detailVC = segue.destinationViewController as! WebViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+            let game = games[indexPath.row]
+            detailVC.title = game.name
+            detailVC.webpage = game.url
+        }
+    }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("gamecell", forIndexPath: indexPath)
