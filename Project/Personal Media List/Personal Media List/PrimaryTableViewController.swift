@@ -21,7 +21,15 @@ class PrimaryTableViewController: UITableViewController {
         populateInitialCategories()
         
         //If you want path for realm database then uncomment this:
-        //print(Realm.Configuration.defaultConfiguration.path!)
+        print(Realm.Configuration.defaultConfiguration.path!)
+        
+        //put in viewDidLoad()
+//        func designUI(){
+//            navigationController?.navigationBar.barTintColor = UIColor.customGreenColor()
+//            navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//            navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+//            navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.peachColor(), NSFontAttributeName: UIFont(name: "GrandHotel-Regular", size: 26)! ]
+//        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

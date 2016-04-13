@@ -12,7 +12,6 @@ import RealmSwift
 class SecondaryTableViewController: UITableViewController {
     
     var items = [Media]()
-    let indexTitles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var retrieved = try! Realm().objects(Media)
     var selectedCategory: Category!
     var categoryString : String = ""
@@ -22,7 +21,10 @@ class SecondaryTableViewController: UITableViewController {
     // Search stuff
     var searchController = UISearchController(searchResultsController: nil)
     var filtered = [Media]()
-
+    
+    let myGreenColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+    let myRedColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +36,6 @@ class SecondaryTableViewController: UITableViewController {
         
         searchController.searchBar.placeholder = "Enter Search"
         searchController.searchBar.sizeToFit()
-        tableView.tableHeaderView = searchController.searchBar
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -77,13 +78,21 @@ class SecondaryTableViewController: UITableViewController {
         }
 
         cell.textLabel?.text = cellItem.name
-
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        if(cellItem.consumed == true) {
+            cell.backgroundColor = myGreenColor
+        }
+        else {
+            cell.backgroundColor = myRedColor
+        }
         return cell
     }
     
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return indexTitles
-    }
+    // Uncomment to get side alphabetical navigation
+//    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+//        let indexTitles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+//        return indexTitles
+//    }
 
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -129,6 +138,22 @@ class SecondaryTableViewController: UITableViewController {
                 }
             }
         }
+        
+        if segue.identifier == "editSave" {
+            let source = segue.sourceViewController as! DetailViewController
+            let changedItem = source.incomingItem
+            let changedValue = source.changedConsume
+            updateDataBase(changedItem, changedConsume: changedValue)
+        }
+    }
+    
+    func updateDataBase(changedItem: Media, changedConsume: Bool) {
+        let realm = try! Realm()
+        print("in update")
+        
+        try! realm.write {
+            changedItem.consumed = changedConsume
+        }
     }
     
     // reload the data from the database into the array
@@ -137,12 +162,12 @@ class SecondaryTableViewController: UITableViewController {
         
         items.removeAll()
         for dataItem in retrieved {
-            print(dataItem)
+            // print(dataItem)
             if(dataItem.type == categoryString) {
                 items.append(dataItem)
             }
         }
-        items.sortInPlace({$0.name < $1.name })
+        items.sortInPlace({ $0.name < $1.name })
     }
 
      //Override to support editing the table view.

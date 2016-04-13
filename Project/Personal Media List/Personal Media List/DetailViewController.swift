@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DetailViewController: UIViewController {
     var incomingItem = Media()
+    var changedConsume = Bool()
 
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var consumedSegmentControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,13 @@ class DetailViewController: UIViewController {
         itemName.text? = incomingItem.name
         let decoded : UIImage = UIImage(data: incomingItem.picture!)!
         itemImage.image = decoded
+        changedConsume = incomingItem.consumed
+        if(incomingItem.consumed == true) {
+            consumedSegmentControl.selectedSegmentIndex = 0
+        }
+        else {
+            consumedSegmentControl.selectedSegmentIndex = 1
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +41,20 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editSave" {
+            print("detail prepare for segue")
+            var newConsumed = Bool()
+            if(consumedSegmentControl.selectedSegmentIndex == 0) {
+                newConsumed = true
+            }
+            else {
+                newConsumed = false
+            }
+            changedConsume = newConsumed
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

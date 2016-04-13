@@ -12,6 +12,12 @@ import RealmSwift
 class Media: Object {
     dynamic var name = ""
     dynamic var type = ""
+    dynamic var consumed = false
     dynamic var picture : NSData?
+    dynamic var id = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 

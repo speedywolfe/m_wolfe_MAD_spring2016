@@ -13,9 +13,11 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     
     var itemToAdd: Media!
     var incomingType : String = ""
+    var isConsumed = false
     
     @IBOutlet weak var addInfoLabel: UILabel!
     @IBOutlet weak var imageDisplay: UIImageView!
+    @IBOutlet weak var segmentPicker: UISegmentedControl!
     
     @IBOutlet weak var nameTextField: UITextField!
 
@@ -41,10 +43,15 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
             if ((nameTextField.text?.isEmpty) == false) {
                 let newItem = Media()
                 newItem.name = nameTextField.text!
+                newItem.id = nameTextField.text!
                 newItem.type = incomingType
                 if(imageDisplay.image != nil) {
                     let imageData : NSData = UIImagePNGRepresentation(imageDisplay.image!)!
                     newItem.picture = imageData
+                }
+                if(segmentPicker.selectedSegmentIndex == 0) {
+                    isConsumed = true
+                    newItem.consumed = isConsumed
                 }
                 itemToAdd = newItem
             }
