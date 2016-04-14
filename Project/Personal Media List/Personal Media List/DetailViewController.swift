@@ -11,7 +11,7 @@ import RealmSwift
 
 class DetailViewController: UIViewController {
     var incomingItem = Media()
-    var changedConsume = Bool()
+    var changedConsume = String()
 
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         let decoded : UIImage = UIImage(data: incomingItem.picture!)!
         itemImage.image = decoded
         changedConsume = incomingItem.consumed
-        if(incomingItem.consumed == true) {
+        if(incomingItem.consumed == "true") {
             consumedSegmentControl.selectedSegmentIndex = 0
         }
         else {
@@ -44,12 +44,12 @@ class DetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "editSave" {
             print("detail prepare for segue")
-            var newConsumed = Bool()
+            var newConsumed = String()
             if(consumedSegmentControl.selectedSegmentIndex == 0) {
-                newConsumed = true
+                newConsumed = "true"
             }
             else {
-                newConsumed = false
+                newConsumed = "false"
             }
             changedConsume = newConsumed
         }

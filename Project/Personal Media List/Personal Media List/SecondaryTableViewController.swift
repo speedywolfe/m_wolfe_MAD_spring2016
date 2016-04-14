@@ -36,11 +36,9 @@ class SecondaryTableViewController: UITableViewController {
         
         searchController.searchBar.placeholder = "Enter Search"
         searchController.searchBar.sizeToFit()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-//        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        searchController.searchBar.scopeButtonTitles = ["All", "true", "false"]
+        searchController.searchBar.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,10 +48,7 @@ class SecondaryTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -79,7 +74,7 @@ class SecondaryTableViewController: UITableViewController {
 
         cell.textLabel?.text = cellItem.name
         cell.textLabel?.textColor = UIColor.whiteColor()
-        if(cellItem.consumed == true) {
+        if(cellItem.consumed == "true") {
             cell.backgroundColor = myGreenColor
         }
         else {
@@ -94,9 +89,7 @@ class SecondaryTableViewController: UITableViewController {
 //        return indexTitles
 //    }
 
-    // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
@@ -147,7 +140,7 @@ class SecondaryTableViewController: UITableViewController {
         }
     }
     
-    func updateDataBase(changedItem: Media, changedConsume: Bool) {
+    func updateDataBase(changedItem: Media, changedConsume: String) {
         let realm = try! Realm()
         print("in update")
         
@@ -182,52 +175,29 @@ class SecondaryTableViewController: UITableViewController {
                 realm.delete(chosenItem)
             }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        } else if editingStyle == .Insert {}
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         filtered = items.filter { item in
-            return item.name.lowercaseString.containsString(searchText.lowercaseString)
+            let categoryMatch = (scope == "All") || (item.consumed == scope)
+            return categoryMatch && item.name.lowercaseString.containsString(searchText.lowercaseString)
         }        
         tableView.reloadData()
     }
-    
-    // Override to support rearranging the table view.
-//    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-//        let fromRow = fromIndexPath.row
-//        let toRow = toIndexPath.row
-//        let moveItem = items[fromRow]
-//        
-//        items.removeAtIndex(fromRow)
-//        items.insert(moveItem, atIndex: toRow)
-//        let chosenItem = typeListDetail.types[selectedItem]
-//        typeListDetail.allData[chosenItem]?.removeAtIndex(fromRow)
-//        typeListDetail.allData[chosenItem]?.insert(moveItem, atIndex: toRow)
-//    }
+}
 
-//    // Override to support conditional rearranging of the table view.
-//    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        // Return false if you do not want the item to be re-orderable.
-//        return false
-//    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// Extensions of main class
+extension SecondaryTableViewController: UISearchBarDelegate {
+    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
-    */
-
 }
 
 extension SecondaryTableViewController: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
     }
 }

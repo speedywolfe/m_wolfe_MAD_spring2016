@@ -13,7 +13,7 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     
     var itemToAdd: Media!
     var incomingType : String = ""
-    var isConsumed = false
+    var isConsumed = "false"
     
     @IBOutlet weak var addInfoLabel: UILabel!
     @IBOutlet weak var imageDisplay: UIImageView!
@@ -50,7 +50,7 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
                     newItem.picture = imageData
                 }
                 if(segmentPicker.selectedSegmentIndex == 0) {
-                    isConsumed = true
+                    isConsumed = "true"
                     newItem.consumed = isConsumed
                 }
                 itemToAdd = newItem
