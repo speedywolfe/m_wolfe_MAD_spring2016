@@ -11,6 +11,4 @@ import RealmSwift
 
 class Category: Object {
     dynamic var name = ""
-    
-    dynamic var category: Category!
 }

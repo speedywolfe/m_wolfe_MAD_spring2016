@@ -16,7 +16,6 @@ class SecondaryTableViewController: UITableViewController {
     var retrieved = try! Realm().objects(Media)
     var selectedCategory: Category!
     var categoryString : String = ""
-    var selectedItem = 0
     var typeListDetail = Media()
     
     // Search stuff
@@ -170,7 +169,7 @@ class SecondaryTableViewController: UITableViewController {
         
         if editingStyle == .Delete {
             // Delete the row from the data source
-            let chosenItem = items[selectedItem]
+            let chosenItem = items[indexPath.row]
             items.removeAtIndex(indexPath.row)
             try! realm.write {
                 realm.delete(chosenItem)

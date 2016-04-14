@@ -12,12 +12,13 @@ import RealmSwift
 class PrimaryTableViewController: UITableViewController {
     
     let realm = try! Realm()
-    var categories: Results<Category>!
+    var categories = [Category]()
+    var retrievedCategories = try! Realm().objects(Category)
     var selectedCategory: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        categories = realm.objects(Category)
+        retrieveData()
         populateInitialCategories()
         
         //If you want path for realm database then uncomment this:
@@ -36,6 +37,11 @@ class PrimaryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        retrieveData()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,9 +63,8 @@ class PrimaryTableViewController: UITableViewController {
                     self.realm.add(newCategory)
                 }
             }
-            
-            categories = realm.objects(Category)
         }
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -98,26 +103,50 @@ class PrimaryTableViewController: UITableViewController {
             detailVC.selectedCategory = selectedCategory
         }
     }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        let realm = try! Realm()
+        
+        if segue.identifier == "saveList" {
+            let source = segue.sourceViewController as! AddListViewController
+            try! realm.write {
+                let newCategory = source.categoryToAdd
+                realm.add(newCategory)
+            }
+        }
+    }
+    
+    // reload the data from the database into the array
+    func retrieveData() {
+        retrievedCategories = try! Realm().objects(Category)
+        
+        categories.removeAll()
+        for item in retrievedCategories {
+            categories.append(item)
+        }
+    }
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        let realm = try! Realm()
+        
         if editingStyle == .Delete {
-            // Delete the row from the data source
+            let chosenCategory = categories[indexPath.row]
+            categories.removeAtIndex(indexPath.row)
+            try! realm.write {
+                realm.delete(chosenCategory)
+            }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2DA14C1CBF32E000DAB164 /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DA14B1CBF32E000DAB164 /* AddListViewController.swift */; };
 		AF67222D1C85F971002A8919 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67222C1C85F971002A8919 /* Category.swift */; };
 		AF67222F1C860722002A8919 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67222E1C860722002A8919 /* AddItemViewController.swift */; };
 		AFE1343E1C854E170012894D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1343D1C854E170012894D /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF2DA14B1CBF32E000DAB164 /* AddListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
 		AF67222C1C85F971002A8919 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AF67222E1C860722002A8919 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		AFE1343A1C854E170012894D /* Personal Media List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Media List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				AF67222E1C860722002A8919 /* AddItemViewController.swift */,
 				AFE1345A1C8557100012894D /* DetailViewController.swift */,
 				AFE134411C854E170012894D /* Main.storyboard */,
+				AF2DA14B1CBF32E000DAB164 /* AddListViewController.swift */,
 				AFE1345C1C8559970012894D /* Media.swift */,
 				AF67222C1C85F971002A8919 /* Category.swift */,
 				AFE134441C854E170012894D /* Assets.xcassets */,
@@ -183,6 +186,7 @@
 			files = (
 				AFE134501C854F300012894D /* PrimaryTableViewController.swift in Sources */,
 				AFE134521C85519B0012894D /* SecondaryTableViewController.swift in Sources */,
+				AF2DA14C1CBF32E000DAB164 /* AddListViewController.swift in Sources */,
 				AFE1343E1C854E170012894D /* AppDelegate.swift in Sources */,
 				AFE1345B1C8557100012894D /* DetailViewController.swift in Sources */,
 				AF67222F1C860722002A8919 /* AddItemViewController.swift in Sources */,
