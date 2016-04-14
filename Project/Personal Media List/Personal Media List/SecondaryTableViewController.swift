@@ -5,6 +5,7 @@
 //  Created by Mitchell Wolfe on 2/29/16.
 //  Copyright © 2016 Mitchell Wolfe. All rights reserved.
 //
+//  The search and scope bar functionality was implemented with the help of tutorial here:https://www.raywenderlich.com/113772/uisearchcontroller-tutorial
 
 import UIKit
 import RealmSwift
