@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2y6-Cb-0DX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2y6-Cb-0DX">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Media-->
@@ -58,16 +57,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-iJ-crN">
-                                <rect key="frame" x="253" y="164" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-iJ-crN">
+                                <rect key="frame" x="229" y="117" width="142" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="gZ2-uI-dYn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-Pn-ysT">
-                                <rect key="frame" x="206" y="228" width="188" height="30"/>
+                                <rect key="frame" x="206" y="165" width="188" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="jHm-Co-aGP"/>
+                                    <constraint firstAttribute="height" constant="30" id="NTt-C2-qrT"/>
+                                    <constraint firstAttribute="width" constant="188" id="isq-PK-RkG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -75,12 +78,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CK0-Pn-ysT" firstAttribute="top" secondItem="2QN-ZV-qya" secondAttribute="bottom" constant="164" id="3Fs-CJ-KlK"/>
-                            <constraint firstItem="CK0-Pn-ysT" firstAttribute="centerX" secondItem="u9R-RG-beW" secondAttribute="centerX" id="9IF-A0-QzJ"/>
-                            <constraint firstItem="8O8-iJ-crN" firstAttribute="centerX" secondItem="u9R-RG-beW" secondAttribute="centerX" id="Czg-PZ-OV7"/>
+                            <constraint firstItem="8O8-iJ-crN" firstAttribute="centerX" secondItem="CK0-Pn-ysT" secondAttribute="centerX" id="EuS-YT-J0H"/>
+                            <constraint firstItem="8O8-iJ-crN" firstAttribute="top" secondItem="2QN-ZV-qya" secondAttribute="bottom" constant="53" id="K5h-jt-ZcP"/>
+                            <constraint firstItem="yWc-tl-OYf" firstAttribute="top" secondItem="CK0-Pn-ysT" secondAttribute="bottom" constant="405" id="Vgh-BB-U12"/>
                             <constraint firstItem="CK0-Pn-ysT" firstAttribute="leading" secondItem="8O8-iJ-crN" secondAttribute="trailing" constant="-142" id="Vup-ro-lDF"/>
-                            <constraint firstItem="CK0-Pn-ysT" firstAttribute="centerY" secondItem="8O8-iJ-crN" secondAttribute="centerY" constant="68.5" id="XIP-Ce-0r0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CK0-Pn-ysT" secondAttribute="trailing" constant="186" id="e6b-dN-nPn"/>
+                            <constraint firstItem="CK0-Pn-ysT" firstAttribute="top" secondItem="8O8-iJ-crN" secondAttribute="bottom" constant="8" symbolic="YES" id="Wec-0o-6jn"/>
+                            <constraint firstItem="8O8-iJ-crN" firstAttribute="centerX" secondItem="u9R-RG-beW" secondAttribute="centerX" id="nsF-Di-EW0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -199,7 +202,7 @@
                                     <segment title="No"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Consumed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ka-6F-Zt5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consumed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ka-6F-Zt5">
                                 <rect key="frame" x="180" y="226" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,6 +225,7 @@
                             <constraint firstItem="TUx-7C-3aF" firstAttribute="top" secondItem="igR-Un-g6n" secondAttribute="bottom" constant="32" id="dHs-f4-vpx"/>
                             <constraint firstItem="5cd-cM-0d0" firstAttribute="top" secondItem="xiD-Yi-EyL" secondAttribute="bottom" constant="36" id="nSf-ZG-VGv"/>
                             <constraint firstItem="9ka-6F-Zt5" firstAttribute="baseline" secondItem="1jD-XZ-HcQ" secondAttribute="firstBaseline" id="ouI-oI-z7Q"/>
+                            <constraint firstItem="9ka-6F-Zt5" firstAttribute="top" secondItem="TUx-7C-3aF" secondAttribute="bottom" constant="26" id="puA-xL-2DK"/>
                             <constraint firstItem="TUx-7C-3aF" firstAttribute="centerX" secondItem="4S7-i5-Geg" secondAttribute="centerX" id="w97-Ni-EKp"/>
                             <constraint firstItem="xiD-Yi-EyL" firstAttribute="centerX" secondItem="5cd-cM-0d0" secondAttribute="centerX" id="yPM-7o-d7c"/>
                             <constraint firstItem="9ka-6F-Zt5" firstAttribute="leading" secondItem="5cd-cM-0d0" secondAttribute="leading" id="ze3-uZ-wJp"/>

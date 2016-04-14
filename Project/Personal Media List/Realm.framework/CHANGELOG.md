@@ -1,3 +1,82 @@
+0.98.7 Release notes (2016-04-13)
+=============================================================
+
+### API breaking changes
+
+* None.
+
+### Enhancements
+
+* None.
+
+### Bugfixes
+
+* Mark further initializers in Objective-C as NS_DESIGNATED_INITIALIZER to prevent that these aren't
+  correctly defined in Swift Object subclasses, which don't qualify for auto-inheriting the required initializers.
+* `-[RLMResults indexOfObjectWithPredicate:]` now returns correct results
+  for `RLMResults` instances that were created by filtering an `RLMArray`.
+* Adjust how RLMObjects are destroyed in order to support using an associated
+  object on an RLMObject to remove KVO observers from that RLMObject.
+* `-[RLMResults indexOfObjectWithPredicate:]` now returns the index of the first matching object for a
+  sorted `RLMResults`, matching its documented behavior.
+* Fix a crash when canceling a transaction that set a relationship.
+* Fix a crash when a query referenced a deleted object.
+
+0.98.6 Release notes (2016-03-25)
+=============================================================
+
+Prebuilt frameworks are now built with Xcode 7.3.
+
+### API breaking changes
+
+* None.
+
+### Enhancements
+
+* None.
+
+### Bugfixes
+
+* Fix running unit tests on iOS simulators and devices with Xcode 7.3.
+
+0.98.5 Release notes (2016-03-14)
+=============================================================
+
+### API breaking changes
+
+* None.
+
+### Enhancements
+
+* None.
+
+### Bugfixes
+
+* Fix a crash when opening a Realm on 32-bit iOS devices.
+
+0.98.4 Release notes (2016-03-10)
+=============================================================
+
+### API breaking changes
+
+* None.
+
+### Enhancements
+
+* None.
+
+### Bugfixes
+
+* Properly report changes made by adding an object to a Realm with
+  addOrUpdate:/createOrUpdate: to KVO observers for existing objects with that
+  primary key.
+* Fix crashes and assorted issues when a migration which added object link
+  properties is rolled back due to an error in the migration block.
+* Fix assertion failures when deleting objects within a migration block of a
+  type which had an object link property added in that migration.
+* Fix an assertion failure in `Query::apply_patch` when updating certain kinds
+  of queries after a write transaction is committed.
+
 0.98.3 Release notes (2016-02-26)
 =============================================================
 
