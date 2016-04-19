@@ -21,12 +21,19 @@ public class BulbCategoryActivity extends ListActivity {
 
         ListView listBulbs = getListView();
         ArrayAdapter<Bulb> listAdapter;
-        switch(bulbtype) {
+        System.out.println("here");
+        System.out.println(bulbtype);
+        switch (bulbtype){
             case "Tulips":
                 listAdapter = new ArrayAdapter<Bulb>(this, android.R.layout.simple_list_item_1, Bulb.tulips);
                 break;
-            default:
-            listAdapter = new ArrayAdapter<Bulb>(this, android.R.layout.simple_expandable_list_item_1, Bulb.tulips);
+            case "Daffodils":
+                listAdapter = new ArrayAdapter<Bulb>(this, android.R.layout.simple_list_item_1, Bulb.daffodils);
+                break;
+            case "Iris":
+                listAdapter = new ArrayAdapter<Bulb>(this, android.R.layout.simple_list_item_1, Bulb.iris);
+                break;
+            default: listAdapter = new ArrayAdapter<Bulb>(this, android.R.layout.simple_list_item_1, Bulb.tulips);
         }
         listBulbs.setAdapter(listAdapter);
     }
@@ -39,6 +46,7 @@ public class BulbCategoryActivity extends ListActivity {
         startActivity(intent);
     }
 
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
