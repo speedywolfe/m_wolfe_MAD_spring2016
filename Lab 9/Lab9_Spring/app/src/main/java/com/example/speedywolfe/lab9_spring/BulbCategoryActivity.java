@@ -16,14 +16,15 @@ public class BulbCategoryActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.out.println("in on create");
         Intent i = getIntent();
-        String bulbtype = i.getStringExtra("bulbtype");
+        bulbtype = i.getStringExtra("bulbtype");
 
         ListView listBulbs = getListView();
         ArrayAdapter<Bulb> listAdapter;
         System.out.println("here");
         System.out.println(bulbtype);
-        switch (bulbtype){
+        switch (bulbtype) {
             case "Tulips":
                 listAdapter = new ArrayAdapter<Bulb>(this, android.R.layout.simple_list_item_1, Bulb.tulips);
                 break;

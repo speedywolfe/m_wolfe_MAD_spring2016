@@ -17,7 +17,23 @@ public class BulbActivity extends Activity {
 
         int bulbnum = (Integer)getIntent().getExtras().get("bulbid");
         String type = (String)getIntent().getExtras().get("bulbtype");
-        Bulb bulb = Bulb.tulips[bulbnum];
+        System.out.println(bulbnum);
+        System.out.println(type);
+
+        Bulb bulb;
+        switch (type) {
+            case "Tulips":
+                bulb = Bulb.tulips[bulbnum];
+                break;
+            case "Daffodils":
+                bulb = Bulb.daffodils[bulbnum];
+                break;
+            case "Iris":
+                bulb = Bulb.iris[bulbnum];
+                break;
+            default:
+                bulb = Bulb.tulips[bulbnum];
+        }
 
         ImageView bulbImage = (ImageView)findViewById(R.id.bulbImageView);
         bulbImage.setImageResource(bulb.getImageResourceID());
