@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">m_wolfe_final</string>
+
+    <string-array name="workout_types">
+        <item>Cardio</item>
+        <item>Strength</item>
+        <item>Flexibility</item>
+    </string-array>
+    <string name="title_activity_sign">Sign Up</string>
+</resources>
