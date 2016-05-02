@@ -1,7 +1,13 @@
+// Received help from tutorial at http://www.sitepoint.com/starting-android-development-creating-todo-app/
+
 package com.example.speedywolfe.todolist;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -25,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private TaskDbHelper mHelper;
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
+
+    private String message;
+    private Boolean addingTask = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
+                                message = task;
+                                addingTask = true;
                                 SQLiteDatabase db = mHelper.getWritableDatabase();
                                 ContentValues values = new ContentValues();
                                 values.put(TaskContract.TaskEntry.COL_TASK_TITLE, task);
@@ -69,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton("Cancel", null)
                         .create();
                 dialog.show();
+
                 return true;
 
             default:
@@ -89,6 +101,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUI() {
+        if(addingTask) {
+            // add notification
+            Intent intent = new Intent(this, MainActivity.class);
+            PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
+
+            Notification n = new Notification.Builder(this)
+                    .setContentTitle("New Task: " + message)
+                    .setContentIntent(pIntent)
+                    .setAutoCancel(true)
+                    .setSmallIcon(R.drawable.icon)
+                    .build();
+
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.notify(0, n);
+            addingTask = false;
+        }
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = mHelper.getReadableDatabase();
         Cursor cursor = db.query(TaskContract.TaskEntry.TABLE,
