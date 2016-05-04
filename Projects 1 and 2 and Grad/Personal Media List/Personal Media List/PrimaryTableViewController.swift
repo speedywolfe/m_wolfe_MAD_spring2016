@@ -22,7 +22,7 @@ class PrimaryTableViewController: UITableViewController {
         populateInitialCategories()
         
         //If you want path for realm database then uncomment this:
-        print(Realm.Configuration.defaultConfiguration.path!)
+        //print(Realm.Configuration.defaultConfiguration.path!)
         
         //put in viewDidLoad()
 //        func designUI(){

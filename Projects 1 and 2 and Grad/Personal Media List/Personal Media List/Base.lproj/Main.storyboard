@@ -208,25 +208,60 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add from Database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-nb-onJ">
+                                <rect key="frame" x="226" y="471" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Manually" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNI-Ll-hdQ">
+                                <rect key="frame" x="248" y="71" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBm-NS-HEQ">
+                                <rect key="frame" x="381" y="505" width="43" height="30"/>
+                                <state key="normal" title="Seach"/>
+                                <connections>
+                                    <action selector="searchDatabase:" destination="i9h-vc-GH8" eventType="touchUpInside" id="oqC-8p-5fa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kko-4J-Uje">
+                                <rect key="frame" x="180" y="505" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="RYp-YG-fUC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xiD-Yi-EyL" firstAttribute="top" secondItem="TUx-7C-3aF" secondAttribute="bottom" constant="73" id="5RA-sS-pRf"/>
+                            <constraint firstItem="aBm-NS-HEQ" firstAttribute="top" secondItem="kko-4J-Uje" secondAttribute="top" id="9Ul-YD-k6x"/>
                             <constraint firstItem="1jD-XZ-HcQ" firstAttribute="centerY" secondItem="9ka-6F-Zt5" secondAttribute="centerY" id="CgN-gP-ram"/>
+                            <constraint firstItem="fbV-nb-onJ" firstAttribute="top" secondItem="5cd-cM-0d0" secondAttribute="bottom" constant="8" symbolic="YES" id="EU0-5e-22K"/>
                             <constraint firstItem="G3B-yw-rtn" firstAttribute="top" secondItem="5cd-cM-0d0" secondAttribute="bottom" constant="137" id="Fwm-FU-Kbi"/>
                             <constraint firstItem="1jD-XZ-HcQ" firstAttribute="centerX" secondItem="xiD-Yi-EyL" secondAttribute="centerX" constant="59.5" id="Gq8-Mb-i6Z"/>
                             <constraint firstItem="1jD-XZ-HcQ" firstAttribute="top" secondItem="TUx-7C-3aF" secondAttribute="bottom" constant="23" id="IR9-84-do9"/>
+                            <constraint firstItem="kko-4J-Uje" firstAttribute="top" secondItem="fbV-nb-onJ" secondAttribute="bottom" constant="13" id="JT8-RB-5ET"/>
                             <constraint firstItem="igR-Un-g6n" firstAttribute="leading" secondItem="TUx-7C-3aF" secondAttribute="leading" id="MbW-dk-x0L"/>
                             <constraint firstItem="xiD-Yi-EyL" firstAttribute="centerX" secondItem="TUx-7C-3aF" secondAttribute="centerX" id="MgX-xB-1vQ"/>
                             <constraint firstItem="1jD-XZ-HcQ" firstAttribute="trailing" secondItem="5cd-cM-0d0" secondAttribute="trailing" id="MuD-f9-cjn"/>
+                            <constraint firstItem="aBm-NS-HEQ" firstAttribute="leading" secondItem="kko-4J-Uje" secondAttribute="trailing" constant="41" id="Ncz-zV-7gM"/>
                             <constraint firstItem="1jD-XZ-HcQ" firstAttribute="baseline" secondItem="9ka-6F-Zt5" secondAttribute="firstBaseline" id="Tgq-Ph-kmf"/>
+                            <constraint firstItem="igR-Un-g6n" firstAttribute="top" secondItem="qNI-Ll-hdQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Vux-M8-r9X"/>
                             <constraint firstItem="igR-Un-g6n" firstAttribute="top" secondItem="uJI-lc-aib" secondAttribute="bottom" constant="36" id="YZS-j8-25P"/>
+                            <constraint firstItem="qNI-Ll-hdQ" firstAttribute="centerX" secondItem="igR-Un-g6n" secondAttribute="centerX" id="aGS-tB-T5u"/>
                             <constraint firstItem="xiD-Yi-EyL" firstAttribute="top" secondItem="1jD-XZ-HcQ" secondAttribute="bottom" constant="22" id="cg9-O4-iEM"/>
                             <constraint firstItem="TUx-7C-3aF" firstAttribute="top" secondItem="igR-Un-g6n" secondAttribute="bottom" constant="32" id="dHs-f4-vpx"/>
                             <constraint firstItem="5cd-cM-0d0" firstAttribute="top" secondItem="xiD-Yi-EyL" secondAttribute="bottom" constant="36" id="nSf-ZG-VGv"/>
                             <constraint firstItem="9ka-6F-Zt5" firstAttribute="baseline" secondItem="1jD-XZ-HcQ" secondAttribute="firstBaseline" id="ouI-oI-z7Q"/>
+                            <constraint firstItem="fbV-nb-onJ" firstAttribute="centerX" secondItem="kko-4J-Uje" secondAttribute="centerX" constant="40" id="phD-CI-MWD"/>
                             <constraint firstItem="9ka-6F-Zt5" firstAttribute="top" secondItem="TUx-7C-3aF" secondAttribute="bottom" constant="26" id="puA-xL-2DK"/>
                             <constraint firstItem="TUx-7C-3aF" firstAttribute="centerX" secondItem="4S7-i5-Geg" secondAttribute="centerX" id="w97-Ni-EKp"/>
+                            <constraint firstItem="fbV-nb-onJ" firstAttribute="centerX" secondItem="5cd-cM-0d0" secondAttribute="centerX" id="xpg-3j-Ghd"/>
                             <constraint firstItem="xiD-Yi-EyL" firstAttribute="centerX" secondItem="5cd-cM-0d0" secondAttribute="centerX" id="yPM-7o-d7c"/>
                             <constraint firstItem="9ka-6F-Zt5" firstAttribute="leading" secondItem="5cd-cM-0d0" secondAttribute="leading" id="ze3-uZ-wJp"/>
                             <constraint firstItem="igR-Un-g6n" firstAttribute="trailing" secondItem="TUx-7C-3aF" secondAttribute="trailing" id="zon-di-T8R"/>
@@ -246,7 +281,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addInfoLabel" destination="igR-Un-g6n" id="dyU-Ko-pFP"/>
+                        <outlet property="databaseLabel" destination="fbV-nb-onJ" id="WTM-7b-ale"/>
+                        <outlet property="databaseTextField" destination="kko-4J-Uje" id="LPU-Kn-ncU"/>
                         <outlet property="imageDisplay" destination="5cd-cM-0d0" id="VEt-JT-Uwl"/>
+                        <outlet property="manualLabel" destination="qNI-Ll-hdQ" id="QHs-2Q-ra6"/>
                         <outlet property="nameTextField" destination="TUx-7C-3aF" id="U4B-N9-rfC"/>
                         <outlet property="segmentPicker" destination="1jD-XZ-HcQ" id="1Cc-4p-nkR"/>
                     </connections>

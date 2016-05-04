@@ -14,6 +14,7 @@
 		AF610B071CBF5C52002B0346 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF610B031CBF5C52002B0346 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF67222D1C85F971002A8919 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67222C1C85F971002A8919 /* Category.swift */; };
 		AF67222F1C860722002A8919 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67222E1C860722002A8919 /* AddItemViewController.swift */; };
+		AFDEFF9B1CD8822300277DCE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEFF9A1CD8822300277DCE /* SwiftyJSON.swift */; };
 		AFE1343E1C854E170012894D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1343D1C854E170012894D /* AppDelegate.swift */; };
 		AFE134431C854E170012894D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE134411C854E170012894D /* Main.storyboard */; };
 		AFE134451C854E170012894D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE134441C854E170012894D /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		AF610B031CBF5C52002B0346 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		AF67222C1C85F971002A8919 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AF67222E1C860722002A8919 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		AFDEFF9A1CD8822300277DCE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		AFE1343A1C854E170012894D /* Personal Media List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Media List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE1343D1C854E170012894D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE134421C854E170012894D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				AF2DA14B1CBF32E000DAB164 /* AddListViewController.swift */,
 				AFE1345C1C8559970012894D /* Media.swift */,
 				AF67222C1C85F971002A8919 /* Category.swift */,
+				AFDEFF9A1CD8822300277DCE /* SwiftyJSON.swift */,
 				AFE134441C854E170012894D /* Assets.xcassets */,
 				AFE134461C854E170012894D /* LaunchScreen.storyboard */,
 				AFE1345E1C855B810012894D /* media.plist */,
@@ -190,6 +193,7 @@
 				AFE1343E1C854E170012894D /* AppDelegate.swift in Sources */,
 				AFE1345B1C8557100012894D /* DetailViewController.swift in Sources */,
 				AF67222F1C860722002A8919 /* AddItemViewController.swift in Sources */,
+				AFDEFF9B1CD8822300277DCE /* SwiftyJSON.swift in Sources */,
 				AFE1345D1C8559970012894D /* Media.swift in Sources */,
 				AF67222D1C85F971002A8919 /* Category.swift in Sources */,
 			);

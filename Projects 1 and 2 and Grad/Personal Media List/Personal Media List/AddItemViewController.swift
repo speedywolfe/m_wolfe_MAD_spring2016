@@ -19,6 +19,10 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var imageDisplay: UIImageView!
     @IBOutlet weak var segmentPicker: UISegmentedControl!
     
+    @IBOutlet weak var databaseLabel: UILabel!
+    @IBOutlet weak var databaseTextField: UITextField!
+    @IBOutlet weak var manualLabel: UILabel!
+    
     @IBOutlet weak var nameTextField: UITextField!
 
     override func viewDidLoad() {
@@ -28,8 +32,13 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     override func viewDidAppear(animated: Bool) {
-        print(incomingType)
         addInfoLabel.text? = "Add new \(incomingType)"
+        print(incomingType)
+        if(incomingType != "Movies") {
+            databaseLabel.hidden = true
+            databaseTextField.hidden = true
+            manualLabel.hidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,5 +80,33 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         imageDisplay.image = image
         print(image)
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func searchDatabase(sender: UIButton) {
+        if((databaseTextField.text?.isEmpty) == false) {
+            let inputText = databaseTextField.text!
+            let formattedText = inputText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            loadjson(formattedText!)
+        }
+    }
+    func loadjson(search: String) {
+        let urlPath = NSURL(string:"http://www.omdbapi.com/?t=" + search + "&y=&plot=short&r=json")!
+        let session = NSURLSession.sharedSession().dataTaskWithURL(urlPath) {
+            (data, response, error) -> Void in
+            
+            dispatch_async(dispatch_get_main_queue()) {self.parsejson(data!)}
+        }
+        session.resume()
+    }
+    
+    func parsejson(data: NSData) {
+        let json = JSON(data: data)
+        let name = json["Title"].stringValue
+        let imageString = json["Poster"].stringValue
+        let imageURL = NSURL(string: imageString)
+        self.nameTextField.text = name
+        let imageData = NSData(contentsOfURL: imageURL!)
+        self.imageDisplay.image = UIImage(data: imageData!)
+        print(name)
     }
 }
