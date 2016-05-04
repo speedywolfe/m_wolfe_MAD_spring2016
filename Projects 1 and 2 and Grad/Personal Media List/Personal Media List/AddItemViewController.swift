@@ -35,7 +35,6 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     
     override func viewDidAppear(animated: Bool) {
         addInfoLabel.text? = "Add new \(incomingType)"
-        print(incomingType)
         if(incomingType != "Movies") {
             databaseLabel.hidden = true
             databaseTextField.hidden = true
@@ -144,7 +143,6 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
                 let imageURL = NSURL(string: imageString)
                 let imageData = NSData(contentsOfURL: imageURL!)
                 self.imageDisplay.image = UIImage(data: imageData!)
-                print(name)
             }
         }
     }
