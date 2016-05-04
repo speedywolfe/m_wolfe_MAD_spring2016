@@ -286,6 +286,7 @@
                         <outlet property="imageDisplay" destination="5cd-cM-0d0" id="VEt-JT-Uwl"/>
                         <outlet property="manualLabel" destination="qNI-Ll-hdQ" id="QHs-2Q-ra6"/>
                         <outlet property="nameTextField" destination="TUx-7C-3aF" id="U4B-N9-rfC"/>
+                        <outlet property="searchButton" destination="aBm-NS-HEQ" id="LnW-r2-fVN"/>
                         <outlet property="segmentPicker" destination="1jD-XZ-HcQ" id="1Cc-4p-nkR"/>
                     </connections>
                 </viewController>

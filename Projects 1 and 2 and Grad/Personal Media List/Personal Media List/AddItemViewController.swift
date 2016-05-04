@@ -22,6 +22,7 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var databaseLabel: UILabel!
     @IBOutlet weak var databaseTextField: UITextField!
     @IBOutlet weak var manualLabel: UILabel!
+    @IBOutlet weak var searchButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
 
@@ -38,6 +39,7 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
             databaseLabel.hidden = true
             databaseTextField.hidden = true
             manualLabel.hidden = true
+            searchButton.hidden = true
         }
     }
 
@@ -56,6 +58,11 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
                 newItem.type = incomingType
                 if(imageDisplay.image != nil) {
                     let imageData : NSData = UIImagePNGRepresentation(imageDisplay.image!)!
+                    newItem.picture = imageData
+                }
+                else {
+                    let defaultImage = UIImage(named: "default_icon")
+                    let imageData : NSData = UIImagePNGRepresentation(defaultImage!)!
                     newItem.picture = imageData
                 }
                 if(segmentPicker.selectedSegmentIndex == 0) {
@@ -94,6 +101,15 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         let session = NSURLSession.sharedSession().dataTaskWithURL(urlPath) {
             (data, response, error) -> Void in
             
+            let httpResponse = response as! NSHTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            guard statusCode == 200
+                else {
+                    print("error download file")
+                    return
+            }
+            
+            print("download successful")
             dispatch_async(dispatch_get_main_queue()) {self.parsejson(data!)}
         }
         session.resume()
@@ -101,12 +117,23 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     
     func parsejson(data: NSData) {
         let json = JSON(data: data)
-        let name = json["Title"].stringValue
-        let imageString = json["Poster"].stringValue
-        let imageURL = NSURL(string: imageString)
-        self.nameTextField.text = name
-        let imageData = NSData(contentsOfURL: imageURL!)
-        self.imageDisplay.image = UIImage(data: imageData!)
-        print(name)
+        print(json)
+        if(json["Response"].stringValue == "False") {
+            let alert1 =  UIAlertController(title: "Doesn't Exist", message: "This movie is not in the database, please try again", preferredStyle: UIAlertControllerStyle.Alert)
+            let cancelAction = UIAlertAction(title: "Ok", style: .Default) { (action) in }
+            alert1.addAction(cancelAction)
+            presentViewController(alert1, animated: true, completion: nil)
+        }
+        else {
+            let name = json["Title"].stringValue
+            self.nameTextField.text = name
+            if(json["Poster"].stringValue != "N/A") {
+                let imageString = json["Poster"].stringValue
+                let imageURL = NSURL(string: imageString)
+                let imageData = NSData(contentsOfURL: imageURL!)
+                self.imageDisplay.image = UIImage(data: imageData!)
+                print(name)
+            }
+        }
     }
 }
