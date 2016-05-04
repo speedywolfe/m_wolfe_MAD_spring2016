@@ -23,6 +23,7 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var databaseTextField: UITextField!
     @IBOutlet weak var manualLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var pictureButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
 
@@ -74,6 +75,11 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         }
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
     // Got help with the photo stuff from: https://www.youtube.com/watch?v=YYS-LwvluL8 by user MstCode
     @IBAction func photoButton(sender: UIButton) {
         let imgPicker = UIImagePickerController()
@@ -94,6 +100,12 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
             let inputText = databaseTextField.text!
             let formattedText = inputText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             loadjson(formattedText!)
+            
+            //change ui on search
+            manualLabel.text? = "Found Name:"
+            searchButton.hidden = true
+            pictureButton.hidden = true
+            view.endEditing(true)
         }
     }
     func loadjson(search: String) {

@@ -180,18 +180,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiD-Yi-EyL">
-                                <rect key="frame" x="231" y="301" width="138" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="D8f-Ee-wj9"/>
-                                    <constraint firstAttribute="width" constant="138" id="lcy-Ud-XcR"/>
-                                </constraints>
-                                <state key="normal" title="Choose a Picture"/>
-                                <connections>
-                                    <action selector="photoButton:" destination="i9h-vc-GH8" eventType="touchUpInside" id="4Hi-OR-MAR"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-cM-0d0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-cM-0d0">
                                 <rect key="frame" x="180" y="335" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="vwn-x2-14q"/>
@@ -238,6 +227,17 @@
                                 <state key="normal" title="Seach"/>
                                 <connections>
                                     <action selector="searchDatabase:" destination="i9h-vc-GH8" eventType="touchUpInside" id="oqC-8p-5fa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiD-Yi-EyL">
+                                <rect key="frame" x="206" y="301" width="189" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="D8f-Ee-wj9"/>
+                                    <constraint firstAttribute="width" constant="189" id="lcy-Ud-XcR"/>
+                                </constraints>
+                                <state key="normal" title="Choose a Picture"/>
+                                <connections>
+                                    <action selector="photoButton:" destination="i9h-vc-GH8" eventType="touchUpInside" id="4Hi-OR-MAR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,6 +292,7 @@
                         <outlet property="imageDisplay" destination="5cd-cM-0d0" id="VEt-JT-Uwl"/>
                         <outlet property="manualLabel" destination="qNI-Ll-hdQ" id="QHs-2Q-ra6"/>
                         <outlet property="nameTextField" destination="TUx-7C-3aF" id="U4B-N9-rfC"/>
+                        <outlet property="pictureButton" destination="xiD-Yi-EyL" id="yAp-62-QEK"/>
                         <outlet property="searchButton" destination="aBm-NS-HEQ" id="LnW-r2-fVN"/>
                         <outlet property="segmentPicker" destination="1jD-XZ-HcQ" id="1Cc-4p-nkR"/>
                     </connections>
